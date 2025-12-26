@@ -11,6 +11,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import type { SidebarGroupData } from "@/types/sidebar-data";
 
@@ -19,6 +20,8 @@ type Props = {
 };
 
 export function DashboardSidebarGroup({ sidebarGroupData }: Props) {
+  const { setOpenMobile } = useSidebar();
+
   return (
     <SidebarGroup>
       <SidebarGroupLabel>{sidebarGroupData.label}</SidebarGroupLabel>
@@ -27,7 +30,10 @@ export function DashboardSidebarGroup({ sidebarGroupData }: Props) {
           <SidebarMenuItem key={menuItem.title}>
             {menuItem.url ? (
               <SidebarMenuButton tooltip={menuItem.title} asChild>
-                <Link href={menuItem.url as Route}>
+                <Link
+                  href={menuItem.url as Route}
+                  onClick={() => setOpenMobile(false)}
+                >
                   {menuItem.icon && <menuItem.icon />}
                   <span>{menuItem.title}</span>
                 </Link>
@@ -42,7 +48,10 @@ export function DashboardSidebarGroup({ sidebarGroupData }: Props) {
               {menuItem.items?.map((menuSubItem) => (
                 <SidebarMenuSubItem key={menuSubItem.title}>
                   <SidebarMenuSubButton asChild>
-                    <Link href={menuSubItem.url as Route}>
+                    <Link
+                      href={menuSubItem.url as Route}
+                      onClick={() => setOpenMobile(false)}
+                    >
                       {menuSubItem.icon && <menuSubItem.icon />}
                       <span>{menuSubItem.title}</span>
                     </Link>
