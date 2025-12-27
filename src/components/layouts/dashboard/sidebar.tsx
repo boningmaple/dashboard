@@ -20,23 +20,11 @@ export function DashboardSidebar({
       </SidebarHeader>*/}
       <SidebarContent>
         <DashboardSidebarGroup
-          sidebarGroupData={dashboardSidebarData.sidebarGroups.dashboardGroup}
+          sidebarGroupData={dashboardSidebarData.sidebarGroups.blocksGroup}
         />
-        <SidebarGroup>
-          <SidebarGroupLabel>Applications</SidebarGroupLabel>
-        </SidebarGroup>
         <DashboardSidebarGroup
-          sidebarGroupData={dashboardSidebarData.sidebarGroups.pagesGroup}
+          sidebarGroupData={dashboardSidebarData.sidebarGroups.componentsGroup}
         />
-        <SidebarGroup>
-          <SidebarGroupLabel>{"Forms & Tables"}</SidebarGroupLabel>
-        </SidebarGroup>
-        <SidebarGroup>
-          <SidebarGroupLabel>{"Charts & Map"}</SidebarGroupLabel>
-        </SidebarGroup>
-        <SidebarGroup>
-          <SidebarGroupLabel>Components</SidebarGroupLabel>
-        </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupLabel>Others</SidebarGroupLabel>
         </SidebarGroup>

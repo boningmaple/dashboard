@@ -1,8 +1,10 @@
 import {
   BugIcon,
   ChartNoAxesCombinedIcon,
+  ChartPieIcon,
   CircleDollarSignIcon,
   ConstructionIcon,
+  FileCheck2Icon,
   FileXIcon,
   KeyRoundIcon,
   LayoutDashboardIcon,
@@ -10,6 +12,7 @@ import {
   MessageCircleQuestionMarkIcon,
   PhoneIcon,
   ServerOffIcon,
+  Table2Icon,
   UsersIcon,
   UserXIcon,
 } from "lucide-react";
@@ -17,8 +20,8 @@ import type { SidebarGroupData } from "@/types/sidebar-data";
 
 type DashboardSidebarData = {
   sidebarGroups: {
-    dashboardGroup: SidebarGroupData;
-    pagesGroup: SidebarGroupData;
+    blocksGroup: SidebarGroupData;
+    componentsGroup: SidebarGroupData;
   };
 };
 
@@ -47,35 +50,34 @@ const dashboardSidebarData: DashboardSidebarData = {
   //   },
   // ],
   sidebarGroups: {
-    dashboardGroup: {
-      label: "Dashboard",
+    blocksGroup: {
+      label: "Blocks",
       menu: {
         items: [
           {
-            title: "Default",
-            url: "/dashboard",
-            icon: LayoutDashboardIcon,
+            title: "Dashboard",
+            Icon: LayoutDashboardIcon,
+            items: [
+              {
+                title: "Default",
+                url: "/dashboard",
+                Icon: LayoutDashboardIcon,
+              },
+              {
+                title: "Analytics",
+                url: "/dashboard/analytics",
+                Icon: ChartNoAxesCombinedIcon,
+              },
+              {
+                title: "Users",
+                url: "/dashboard/users",
+                Icon: UsersIcon,
+              },
+            ],
           },
-          {
-            title: "Analytics",
-            url: "/dashboard/analytics",
-            icon: ChartNoAxesCombinedIcon,
-          },
-          {
-            title: "Users",
-            url: "/dashboard/users",
-            icon: UsersIcon,
-          },
-        ],
-      },
-    },
-    pagesGroup: {
-      label: "Pages",
-      menu: {
-        items: [
           {
             title: "Auth",
-            icon: KeyRoundIcon,
+            Icon: KeyRoundIcon,
             items: [
               {
                 title: "Login",
@@ -105,49 +107,68 @@ const dashboardSidebarData: DashboardSidebarData = {
           },
           {
             title: "Erros",
-            icon: BugIcon,
+            Icon: BugIcon,
             items: [
               {
                 title: "Unauthorized",
                 url: "/pages/errors/unauthorized",
-                icon: LockIcon,
+                Icon: LockIcon,
               },
               {
                 title: "Forbidden",
                 url: "/pages/errors/forbidden",
-                icon: UserXIcon,
+                Icon: UserXIcon,
               },
               {
                 title: "Not Found",
                 url: "/pages/errors/not-found",
-                icon: FileXIcon,
+                Icon: FileXIcon,
               },
               {
                 title: "Internal Server Error",
                 url: "/pages/errors/internal-server-error",
-                icon: ServerOffIcon,
+                Icon: ServerOffIcon,
               },
               {
                 title: "Maintenance Error",
                 url: "/pages/errors/maintenance-error",
-                icon: ConstructionIcon,
+                Icon: ConstructionIcon,
               },
             ],
           },
           {
             title: "Pricing",
-            icon: CircleDollarSignIcon,
+            Icon: CircleDollarSignIcon,
             url: "/pages/pricing",
           },
           {
             title: "Contact Us",
-            icon: PhoneIcon,
+            Icon: PhoneIcon,
             url: "/pages/contact-us",
           },
           {
             title: "FAQs",
-            icon: MessageCircleQuestionMarkIcon,
+            Icon: MessageCircleQuestionMarkIcon,
             url: "/pages/faqs",
+          },
+        ],
+      },
+    },
+    componentsGroup: {
+      label: "Components",
+      menu: {
+        items: [
+          {
+            title: "Charts",
+            Icon: ChartPieIcon,
+          },
+          {
+            title: "Tables",
+            Icon: Table2Icon,
+          },
+          {
+            title: "Forms",
+            Icon: FileCheck2Icon,
           },
         ],
       },

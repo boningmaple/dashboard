@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+import type IconType from "./icon-type";
 
 export type SidebarGroupData = {
   label: string;
@@ -12,7 +12,7 @@ export type SideBarMenuData = {
 export type SidebarMenuItemData = {
   title: string;
   url?: string;
-  icon?: LucideIcon;
+  Icon?: IconType;
   isActive?: boolean;
   items?: SidebarMenuItemData[];
 };

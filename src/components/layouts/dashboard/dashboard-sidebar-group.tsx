@@ -34,13 +34,13 @@ export function DashboardSidebarGroup({ sidebarGroupData }: Props) {
                   href={menuItem.url as Route}
                   onClick={() => setOpenMobile(false)}
                 >
-                  {menuItem.icon && <menuItem.icon />}
+                  {menuItem.Icon && <menuItem.Icon />}
                   <span>{menuItem.title}</span>
                 </Link>
               </SidebarMenuButton>
             ) : (
               <SidebarMenuButton tooltip={menuItem.title}>
-                {menuItem.icon && <menuItem.icon />}
+                {menuItem.Icon && <menuItem.Icon />}
                 <span>{menuItem.title}</span>
               </SidebarMenuButton>
             )}
@@ -52,7 +52,7 @@ export function DashboardSidebarGroup({ sidebarGroupData }: Props) {
                       href={menuSubItem.url as Route}
                       onClick={() => setOpenMobile(false)}
                     >
-                      {menuSubItem.icon && <menuSubItem.icon />}
+                      {menuSubItem.Icon && <menuSubItem.Icon />}
                       <span>{menuSubItem.title}</span>
                     </Link>
                   </SidebarMenuSubButton>
