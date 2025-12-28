@@ -8,7 +8,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import type { OverviewChartItem } from "../api/OverviewChartItem";
+import type { OverviewChartItem } from "../api/getOverviewChartData";
 
 export default function OverviewChart({ data }: { data: OverviewChartItem[] }) {
   return (
