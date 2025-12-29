@@ -10,7 +10,9 @@ export default function DashboardSidebarTrigger({
   onClick,
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { toggleSidebar, open } = useSidebar();
+  const { toggleSidebar, open, isMobile, openMobile } = useSidebar();
+
+  const isOpen = isMobile ? openMobile : open;
 
   return (
     <Button
@@ -25,7 +27,7 @@ export default function DashboardSidebarTrigger({
       }}
       {...props}
     >
-      {open ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
+      {isOpen ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );
