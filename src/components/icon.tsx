@@ -1,3 +1,4 @@
+import { SiShadcnui } from "@icons-pack/react-simple-icons";
 import {
   BugIcon,
   ChartNoAxesCombinedIcon,
@@ -9,7 +10,7 @@ import {
   KeyRoundIcon,
   LayoutDashboardIcon,
   LockIcon,
-  LucideProps,
+  type LucideProps,
   MessageCircleQuestionMarkIcon,
   PhoneIcon,
   ServerOffIcon,
@@ -19,6 +20,7 @@ import {
 } from "lucide-react";
 
 const ICON_MAP = {
+  // Lucide Icons
   "layout-dashboard": LayoutDashboardIcon,
   "chart-no-axes-combined": ChartNoAxesCombinedIcon,
   users: UsersIcon,
@@ -29,12 +31,14 @@ const ICON_MAP = {
   "file-x": FileXIcon,
   "server-off": ServerOffIcon,
   construction: ConstructionIcon,
-  pricing: CircleDollarSignIcon,
+  "circle-dollar-sign": CircleDollarSignIcon,
   phone: PhoneIcon,
   "message-circle-question-mark": MessageCircleQuestionMarkIcon,
   "chart-pie": ChartPieIcon,
   "table-2": Table2Icon,
   "file-check-corner": FileCheckCornerIcon,
+  // Brand Icons
+  shadcnui: SiShadcnui,
 } as const;
 
 type IconName = keyof typeof ICON_MAP;

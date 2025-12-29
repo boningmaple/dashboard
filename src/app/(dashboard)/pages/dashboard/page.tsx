@@ -9,9 +9,11 @@ export default async function Page() {
   ]);
 
   return (
-    <Dashboard
-      dashboardMetrics={dashboardMetrics}
-      overviewChartData={overviewChartData}
-    />
+    <main className="flex-1 flex flex-col gap-6 p-4 w-full max-w-7xl mx-auto">
+      <Dashboard
+        dashboardMetrics={dashboardMetrics}
+        overviewChartData={overviewChartData}
+      />
+    </main>
   );
 }

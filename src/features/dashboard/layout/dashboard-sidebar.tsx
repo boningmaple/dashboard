@@ -20,9 +20,6 @@ export default function DashboardSidebar({
 }: Props) {
   return (
     <Sidebar collapsible="icon" {...props}>
-      {/*<SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
-      </SidebarHeader>*/}
       <SidebarContent>
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
@@ -31,16 +28,15 @@ export default function DashboardSidebar({
         />
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
+            dashboardSidebarData.dashboardSidebarGroups.blocksGroup
+          }
+        />
+        <DashboardSidebarGroup
+          dashboardSidebarGroupData={
             dashboardSidebarData.dashboardSidebarGroups.componentsGroup
           }
         />
-        <SidebarGroup>
-          <SidebarGroupLabel>Others</SidebarGroupLabel>
-        </SidebarGroup>
       </SidebarContent>
-      {/*<SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>*/}
     </Sidebar>
   );
 }

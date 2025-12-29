@@ -109,13 +109,23 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
           ],
         },
       },
-      componentsGroup: {
-        label: "Components",
+      blocksGroup: {
+        label: "Blocks",
         menu: {
           items: [
             {
               title: "Charts",
               icon: "chart-pie",
+              items: [
+                {
+                  title: "Recharts",
+                  items: [
+                    { title: "Line Charts", url: "/blocks/charts/line-charts" },
+                    { title: "Bar Charts", url: "/blocks/charts/bar-charts" },
+                    { title: "Pie Charts", url: "/blocks/charts/pie-charts" },
+                  ],
+                },
+              ],
             },
             {
               title: "Tables",
@@ -124,6 +134,35 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
             {
               title: "Forms",
               icon: "file-check-corner",
+              items: [
+                {
+                  title: "Templates",
+                  items: [
+                    {
+                      title: "Basic",
+                      url: "/blocks/forms/basic",
+                    },
+                  ],
+                },
+                { title: "React Hook Form" },
+              ],
+            },
+          ],
+        },
+      },
+      componentsGroup: {
+        label: "Components",
+        menu: {
+          items: [
+            {
+              title: "Shadcn UI",
+              icon: "shadcnui",
+              items: [
+                {
+                  title: "Input",
+                  url: "/components/shadcnui/input",
+                },
+              ],
             },
           ],
         },

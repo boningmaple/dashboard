@@ -14,7 +14,10 @@ import {
   SidebarMenuSubItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import type { DashboardSidebarGroupData } from "../types";
+import type {
+  DashboardSidebarGroupData,
+  DashboardSidebarMenuItemData,
+} from "../types";
 
 type Props = {
   dashboardSidebarGroupData: DashboardSidebarGroupData;
@@ -27,42 +30,51 @@ export function DashboardSidebarGroup({ dashboardSidebarGroupData }: Props) {
     <SidebarGroup>
       <SidebarGroupLabel>{dashboardSidebarGroupData.label}</SidebarGroupLabel>
       <SidebarMenu>
-        {dashboardSidebarGroupData.menu.items.map((menuItem) => (
-          <SidebarMenuItem key={menuItem.title}>
-            {menuItem.url ? (
-              <SidebarMenuButton tooltip={menuItem.title} asChild>
-                <Link
-                  href={menuItem.url as Route}
-                  onClick={() => setOpenMobile(false)}
-                >
-                  <Icon name={menuItem.icon} />
-                  <span>{menuItem.title}</span>
-                </Link>
-              </SidebarMenuButton>
-            ) : (
-              <SidebarMenuButton tooltip={menuItem.title}>
-                <Icon name={menuItem.icon} />
-                <span>{menuItem.title}</span>
-              </SidebarMenuButton>
-            )}
-            <SidebarMenuSub>
-              {menuItem.items?.map((menuSubItem) => (
-                <SidebarMenuSubItem key={menuSubItem.title}>
-                  <SidebarMenuSubButton asChild>
-                    <Link
-                      href={menuSubItem.url as Route}
-                      onClick={() => setOpenMobile(false)}
-                    >
-                      <Icon name={menuSubItem.icon} />
-                      <span>{menuSubItem.title}</span>
-                    </Link>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
-              ))}
-            </SidebarMenuSub>
-          </SidebarMenuItem>
-        ))}
+        {dashboardSidebarGroupData.menu.items.map((item) =>
+          renderSidebarMenuItem(item, setOpenMobile),
+        )}
       </SidebarMenu>
     </SidebarGroup>
+  );
+}
+
+function renderSidebarMenuItem(
+  item: DashboardSidebarMenuItemData,
+  setOpenMobile: (open: boolean) => void,
+  depth = 0,
+) {
+  const Item = depth === 0 ? SidebarMenuItem : SidebarMenuSubItem;
+  const Sub = SidebarMenuSub;
+  const Button = depth === 0 ? SidebarMenuButton : SidebarMenuSubButton;
+  const content = (
+    <>
+      <Icon name={item.icon} />
+      <span>{item.title}</span>
+    </>
+  );
+  const handleClick = () => {
+    setOpenMobile(false);
+  };
+
+  return (
+    <Item key={item.title}>
+      {item.url ? (
+        <Button tooltip={item.title} asChild>
+          <Link href={item.url as Route} onClick={handleClick}>
+            {content}
+          </Link>
+        </Button>
+      ) : (
+        <Button tooltip={item.title}>{content}</Button>
+      )}
+
+      {item.items?.length ? (
+        <Sub>
+          {item.items.map((subMenuItem) =>
+            renderSidebarMenuItem(subMenuItem, handleClick, depth + 1),
+          )}
+        </Sub>
+      ) : null}
+    </Item>
   );
 }
