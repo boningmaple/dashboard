@@ -1,3 +1,4 @@
+import { ThemeSwitch } from "@/components/theme-switch";
 import DashboardSidebarTrigger from "./sidebar-trigger";
 
 export default function DashboardHeader() {
@@ -5,6 +6,7 @@ export default function DashboardHeader() {
     <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
       <div className="flex items-center gap-2 px-4">
         <DashboardSidebarTrigger />
+        <ThemeSwitch />
       </div>
     </header>
   );

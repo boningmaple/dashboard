@@ -102,15 +102,14 @@ export default function Page() {
           variant="ghost"
           className="
             rounded-md
-            border-2 border-black
-            bg-white text-black
-            hover:bg-white hover:text-black
-            active:bg-white
+            border-2 border-foreground
+            hover:bg-background
+            active:bg-background
             font-bold
-            shadow-[4px_4px_0_0_#000]
+            shadow-[4px_4px_0_0] shadow-foreground
             transition-all
             hover:translate-x-px hover:translate-y-px
-            hover:shadow-[3px_3px_0_0_#000]
+            hover:shadow-[3px_3px_0_0]
             active:translate-x-1 active:translate-y-1
             active:shadow-none
           "
