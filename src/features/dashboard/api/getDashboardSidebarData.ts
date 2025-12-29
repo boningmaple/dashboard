@@ -159,6 +159,10 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               icon: "shadcnui",
               items: [
                 {
+                  title: "Button",
+                  url: "/components/shadcnui/button",
+                },
+                {
                   title: "Input",
                   url: "/components/shadcnui/input",
                 },
