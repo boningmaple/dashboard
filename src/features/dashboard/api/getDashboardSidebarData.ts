@@ -139,8 +139,12 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Templates",
                   items: [
                     {
-                      title: "Basic",
-                      url: "/blocks/forms/basic",
+                      title: "Login",
+                      url: "/blocks/forms/login",
+                    },
+                    {
+                      title: "Signup",
+                      url: "/blocks/forms/signup",
                     },
                   ],
                 },
