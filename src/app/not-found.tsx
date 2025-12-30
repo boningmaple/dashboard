@@ -1,5 +1,9 @@
 import NotFoundError from "@/features/errors/not-found-error";
 
 export default function NotFound() {
-  return <NotFoundError />;
+  return (
+    <main className="h-svh flex flex-col gap-6 p-4 w-full max-w-7xl mx-auto justify-center">
+      <NotFoundError />
+    </main>
+  );
 }

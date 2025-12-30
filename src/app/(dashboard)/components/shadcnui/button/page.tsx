@@ -10,7 +10,7 @@ import { Spinner } from "@/components/ui/spinner";
 export default function Page() {
   return (
     <main className="flex-1 flex flex-col gap-6 p-4 w-full max-w-7xl mx-auto">
-      <h2 className="text-xl font-semibold">Default Button</h2>
+      <h2 className="text-xl font-semibold">Primary Button</h2>
       <div className="flex gap-6 items-center flex-wrap">
         <Button>Button</Button>
       </div>

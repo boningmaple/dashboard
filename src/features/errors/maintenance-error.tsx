@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function MaintenanceError() {
   const router = useRouter();
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-2">
+    <div className="flex flex-col items-center justify-center gap-2">
       <h1 className="text-[7rem] leading-tight font-bold">503</h1>
       <span className="font-medium">Website is under maintenance!</span>
       <p className="text-center text-muted-foreground">

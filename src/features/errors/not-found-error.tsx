@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function NotFoundError() {
   const router = useRouter();
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-2">
+    <div className="flex flex-col items-center justify-center gap-2">
       <h1 className="text-[7rem] font-bold">404</h1>
       <span className="font-medium">Oops! Page Not Found!</span>
       <p className="text-center text-muted-foreground">
