@@ -19,7 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export default function LoginFormClassic({
+export default function LoginFormThirdPartyFirst({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -28,13 +28,23 @@ export default function LoginFormClassic({
       <Card>
         <CardHeader>
           <CardTitle className="text-xl">Login</CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
         </CardHeader>
         <CardContent>
           <form>
             <FieldGroup>
+              <Field className="grid grid-cols-2">
+                <Button variant="outline" type="button">
+                  <SiApple />
+                  Apple
+                </Button>
+                <Button variant="outline" type="button">
+                  <SiGoogle />
+                  Google
+                </Button>
+              </Field>
+              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
+                Or
+              </FieldSeparator>
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
                 <Input
@@ -58,19 +68,6 @@ export default function LoginFormClassic({
               </Field>
               <Field>
                 <Button type="submit">Login</Button>
-              </Field>
-              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
-                Or
-              </FieldSeparator>
-              <Field className="grid grid-cols-2">
-                <Button variant="outline" type="button">
-                  <SiApple />
-                  Apple
-                </Button>
-                <Button variant="outline" type="button">
-                  <SiGoogle />
-                  Google
-                </Button>
               </Field>
               <FieldDescription className="text-center">
                 Don&apos;t have an account? <a href="#">Sign up</a>

@@ -136,19 +136,13 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               icon: "file-check-corner",
               items: [
                 {
-                  title: "Templates",
-                  items: [
-                    {
-                      title: "Login",
-                      url: "/blocks/forms/login",
-                    },
-                    {
-                      title: "Signup",
-                      url: "/blocks/forms/signup",
-                    },
-                  ],
+                  title: "Login",
+                  url: "/blocks/forms/login",
                 },
-                { title: "React Hook Form" },
+                {
+                  title: "Signup",
+                  url: "/blocks/forms/signup",
+                },
               ],
             },
           ],
