@@ -1,12 +1,7 @@
 "use client";
 
 import type * as React from "react";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupLabel,
-} from "@/components/ui/sidebar";
+import { Sidebar, SidebarContent } from "@/components/ui/sidebar";
 import type { DashboardSidebarData } from "../types";
 import { DashboardSidebarGroup } from "./dashboard-sidebar-group";
 
@@ -19,7 +14,7 @@ export default function DashboardSidebar({
   ...props
 }: Props) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar variant="floating" collapsible="icon" {...props}>
       <SidebarContent>
         <DashboardSidebarGroup
           dashboardSidebarGroupData={

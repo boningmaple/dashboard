@@ -25,7 +25,11 @@ export default function DashboardSidebarTrigger({
       }}
       {...props}
     >
-      {isOpen ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
+      {isOpen ? (
+        <PanelLeftCloseIcon className="scale-115" />
+      ) : (
+        <PanelLeftOpenIcon className="scale-115" />
+      )}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

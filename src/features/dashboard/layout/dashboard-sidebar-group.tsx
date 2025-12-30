@@ -4,6 +4,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import Icon from "@/components/icon";
 import {
+  SidebarContextProps,
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
@@ -24,14 +25,14 @@ type Props = {
 };
 
 export function DashboardSidebarGroup({ dashboardSidebarGroupData }: Props) {
-  const { setOpenMobile } = useSidebar();
+  const sidebarController = useSidebar();
 
   return (
     <SidebarGroup>
       <SidebarGroupLabel>{dashboardSidebarGroupData.label}</SidebarGroupLabel>
       <SidebarMenu>
         {dashboardSidebarGroupData.menu.items.map((item) =>
-          renderSidebarMenuItem(item, setOpenMobile),
+          renderSidebarMenuItem(item, sidebarController),
         )}
       </SidebarMenu>
     </SidebarGroup>
@@ -40,7 +41,7 @@ export function DashboardSidebarGroup({ dashboardSidebarGroupData }: Props) {
 
 function renderSidebarMenuItem(
   item: DashboardSidebarMenuItemData,
-  setOpenMobile: (open: boolean) => void,
+  sidebarController: SidebarContextProps,
   depth = 0,
 ) {
   const Item = depth === 0 ? SidebarMenuItem : SidebarMenuSubItem;
@@ -52,26 +53,31 @@ function renderSidebarMenuItem(
       <span>{item.title}</span>
     </>
   );
-  const handleClick = () => {
-    setOpenMobile(false);
-  };
 
   return (
     <Item key={item.title}>
       {item.url ? (
         <Button tooltip={item.title} asChild>
-          <Link href={item.url as Route} onClick={handleClick}>
+          <Link
+            href={item.url as Route}
+            onClick={() => sidebarController.setOpenMobile(false)}
+          >
             {content}
           </Link>
         </Button>
       ) : (
-        <Button tooltip={item.title}>{content}</Button>
+        <Button
+          tooltip={item.title}
+          onClick={() => sidebarController.setOpen(true)}
+        >
+          {content}
+        </Button>
       )}
 
       {item.items?.length ? (
         <Sub>
           {item.items.map((subMenuItem) =>
-            renderSidebarMenuItem(subMenuItem, handleClick, depth + 1),
+            renderSidebarMenuItem(subMenuItem, sidebarController, depth + 1),
           )}
         </Sub>
       ) : null}
