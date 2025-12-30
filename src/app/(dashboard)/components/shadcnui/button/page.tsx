@@ -11,11 +11,11 @@ export default function Page() {
   return (
     <main className="flex-1 flex flex-col gap-6 p-4 w-full max-w-7xl mx-auto">
       <h2 className="text-xl font-semibold">Default Button</h2>
-      <div className="flex gap-6">
+      <div className="flex gap-6 items-center flex-wrap">
         <Button>Button</Button>
       </div>
       <h2 className="text-xl font-semibold">Size</h2>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center flex-wrap">
         <div className="flex gap-2 items-center">
           <Button size="sm">Small</Button>
           <Button size="icon-sm">
@@ -36,7 +36,7 @@ export default function Page() {
         </div>
       </div>
       <h2 className="text-xl font-semibold">Variant</h2>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center flex-wrap">
         <div className="flex gap-2 items-center">
           <Button>Button</Button>
           <Button size="icon">
@@ -75,7 +75,7 @@ export default function Page() {
         </div>
       </div>
       <h2 className="text-xl font-semibold">With Icon</h2>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center flex-wrap">
         <Button variant="outline" size="sm">
           <GitBranchIcon /> New Branch
         </Button>
@@ -84,20 +84,20 @@ export default function Page() {
         </Button>
       </div>
       <h2 className="text-xl font-semibold">Rounded</h2>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center flex-wrap">
         <Button variant="outline" size="icon" className="rounded-full">
           <ArrowUpIcon />
         </Button>
       </div>
       <h2 className="text-xl font-semibold">Spinner</h2>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center flex-wrap">
         <Button variant="outline" disabled>
           <Spinner />
           Submit
         </Button>
       </div>
       <h2 className="text-xl font-semibold">Others</h2>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center flex-wrap">
         <Button
           variant="ghost"
           className="
