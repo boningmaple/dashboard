@@ -1,18 +1,24 @@
 "use client";
 
+import { ChevronRightIcon } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Icon from "@/components/icon";
 import {
-  SidebarContextProps,
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import {
+  type SidebarContextProps,
   SidebarGroup,
+  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
   useSidebar,
 } from "@/components/ui/sidebar";
 import type {
@@ -25,62 +31,101 @@ type Props = {
 };
 
 export function DashboardSidebarGroup({ dashboardSidebarGroupData }: Props) {
-  const sidebarController = useSidebar();
+  const sidebarContext = useSidebar();
+  const pathname = usePathname();
 
   return (
     <SidebarGroup>
       <SidebarGroupLabel>{dashboardSidebarGroupData.label}</SidebarGroupLabel>
-      <SidebarMenu>
-        {dashboardSidebarGroupData.menu.items.map((item) =>
-          renderSidebarMenuItem(item, sidebarController),
-        )}
-      </SidebarMenu>
+      <SidebarGroupContent>
+        <SidebarMenu>
+          {dashboardSidebarGroupData.menu.items.map((item) => (
+            <Tree
+              key={item.title}
+              item={item}
+              sidebarContext={sidebarContext}
+              pathname={pathname}
+            />
+          ))}
+        </SidebarMenu>
+      </SidebarGroupContent>
     </SidebarGroup>
   );
 }
 
-function renderSidebarMenuItem(
-  item: DashboardSidebarMenuItemData,
-  sidebarController: SidebarContextProps,
-  depth = 0,
-) {
-  const Item = depth === 0 ? SidebarMenuItem : SidebarMenuSubItem;
-  const Sub = SidebarMenuSub;
-  const Button = depth === 0 ? SidebarMenuButton : SidebarMenuSubButton;
-  const content = (
-    <>
-      <Icon name={item.icon} />
-      <span>{item.title}</span>
-    </>
-  );
+type TreeProps = {
+  item: DashboardSidebarMenuItemData;
+  sidebarContext: SidebarContextProps;
+  pathname: string;
+};
+
+function Tree({ item, sidebarContext, pathname }: TreeProps) {
+  const hasActiveItem = checkIfHasActiveItem(item, pathname);
+
+  if (!item.items?.length) {
+    return (
+      <div className="mr-6">
+        <SidebarMenuButton
+          tooltip={item.title}
+          asChild
+          isActive={hasActiveItem}
+          onClick={() => sidebarContext.setOpenMobile(false)}
+        >
+          <Link href={item.url as Route}>
+            <Icon name={item.icon} />
+            <span>{item.title}</span>
+          </Link>
+        </SidebarMenuButton>
+      </div>
+    );
+  }
 
   return (
-    <Item key={item.title}>
-      {item.url ? (
-        <Button tooltip={item.title} asChild>
-          <Link
-            href={item.url as Route}
-            onClick={() => sidebarController.setOpenMobile(false)}
+    <SidebarMenuItem>
+      <Collapsible
+        className="group/collapsible [&[data-state=open]>button>svg:last-child]:rotate-90"
+        defaultOpen={hasActiveItem}
+      >
+        <CollapsibleTrigger asChild>
+          <SidebarMenuButton
+            tooltip={item.title}
+            onClick={(e) => {
+              if (sidebarContext.state === "collapsed") {
+                e.preventDefault();
+                e.stopPropagation();
+                sidebarContext.setOpen(true);
+              }
+            }}
           >
-            {content}
-          </Link>
-        </Button>
-      ) : (
-        <Button
-          tooltip={item.title}
-          onClick={() => sidebarController.setOpen(true)}
-        >
-          {content}
-        </Button>
-      )}
+            <Icon name={item.icon} />
+            <span>{item.title}</span>
+            <ChevronRightIcon className="ml-auto transition-transform" />
+          </SidebarMenuButton>
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <SidebarMenuSub className="mr-0 pr-px">
+            {item.items?.map((subItem) => (
+              <Tree
+                key={subItem.title}
+                item={subItem}
+                sidebarContext={sidebarContext}
+                pathname={pathname}
+              />
+            ))}
+          </SidebarMenuSub>
+        </CollapsibleContent>
+      </Collapsible>
+    </SidebarMenuItem>
+  );
+}
 
-      {item.items?.length ? (
-        <Sub>
-          {item.items.map((subMenuItem) =>
-            renderSidebarMenuItem(subMenuItem, sidebarController, depth + 1),
-          )}
-        </Sub>
-      ) : null}
-    </Item>
+function checkIfHasActiveItem(
+  item: DashboardSidebarMenuItemData,
+  pathname: string,
+): boolean {
+  if (item.url === pathname) return true;
+
+  return (
+    item.items?.some((child) => checkIfHasActiveItem(child, pathname)) ?? false
   );
 }

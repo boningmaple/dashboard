@@ -130,6 +130,7 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
             {
               title: "Tables",
               icon: "table-2",
+              url: "/blocks/tables",
             },
             {
               title: "Forms",
