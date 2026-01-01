@@ -1,5 +1,6 @@
 export type DashboardSidebarData = {
   dashboardSidebarGroups: {
+    blogGroup: DashboardSidebarGroupData;
     designSystemGroup: DashboardSidebarGroupData;
     pagesGroup: DashboardSidebarGroupData;
     blocksGroup: DashboardSidebarGroupData;

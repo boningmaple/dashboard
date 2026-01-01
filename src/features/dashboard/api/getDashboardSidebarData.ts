@@ -5,6 +5,23 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
 
   return {
     dashboardSidebarGroups: {
+      blogGroup: {
+        label: "Blog",
+        menu: {
+          items: [
+            {
+              title: "Posts",
+              icon: "library",
+              items: [
+                {
+                  title: "Less is More",
+                  url: "/blog/less-is-more",
+                },
+              ],
+            },
+          ],
+        },
+      },
       designSystemGroup: {
         label: "Design System",
         menu: {

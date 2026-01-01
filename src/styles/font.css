@@ -1,5 +1,5 @@
 @theme inline {
-    --font-sans: var(--font-roboto);
-    --font-serif: var(--font-roboto-serif);
-    --font-mono: var(--font-roboto-mono);
+  --font-sans: var(--font-roboto);
+  --font-serif: var(--font-roboto-serif);
+  --font-mono: var(--font-roboto-mono);
 }

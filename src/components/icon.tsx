@@ -9,6 +9,7 @@ import {
   FileXIcon,
   KeyRoundIcon,
   LayoutDashboardIcon,
+  LibraryIcon,
   LockIcon,
   type LucideProps,
   MessageCircleQuestionMarkIcon,
@@ -37,6 +38,7 @@ const ICON_MAP = {
   "chart-pie": ChartPieIcon,
   "table-2": Table2Icon,
   "file-check-corner": FileCheckCornerIcon,
+  library: LibraryIcon,
   // Brand Icons
   shadcnui: SiShadcnui,
 } as const;

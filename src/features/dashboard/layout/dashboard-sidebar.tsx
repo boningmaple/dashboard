@@ -22,6 +22,12 @@ export default function DashboardSidebar({
       <SidebarContent>
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
+            dashboardSidebarData.dashboardSidebarGroups.blogGroup
+          }
+        />
+        <SidebarSeparator className="mx-0" />
+        <DashboardSidebarGroup
+          dashboardSidebarGroupData={
             dashboardSidebarData.dashboardSidebarGroups.designSystemGroup
           }
         />
