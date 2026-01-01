@@ -5,6 +5,12 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
 
   return {
     dashboardSidebarGroups: {
+      designSystemGroup: {
+        label: "Design System",
+        menu: {
+          items: [],
+        },
+      },
       pagesGroup: {
         label: "Pages",
         menu: {

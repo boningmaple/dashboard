@@ -1,7 +1,11 @@
 "use client";
 
 import type * as React from "react";
-import { Sidebar, SidebarContent } from "@/components/ui/sidebar";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarSeparator,
+} from "@/components/ui/sidebar";
 import type { DashboardSidebarData } from "../types";
 import { DashboardSidebarGroup } from "./dashboard-sidebar-group";
 
@@ -18,14 +22,22 @@ export default function DashboardSidebar({
       <SidebarContent>
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
+            dashboardSidebarData.dashboardSidebarGroups.designSystemGroup
+          }
+        />
+        <SidebarSeparator className="mx-0" />
+        <DashboardSidebarGroup
+          dashboardSidebarGroupData={
             dashboardSidebarData.dashboardSidebarGroups.pagesGroup
           }
         />
+        <SidebarSeparator className="mx-0" />
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
             dashboardSidebarData.dashboardSidebarGroups.blocksGroup
           }
         />
+        <SidebarSeparator className="mx-0" />
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
             dashboardSidebarData.dashboardSidebarGroups.componentsGroup

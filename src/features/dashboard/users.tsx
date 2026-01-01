@@ -57,7 +57,7 @@ function useDebouncedValue<T>(value: T, delay = 250) {
 }
 
 // Single-column fuzzy
-const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
+const fuzzyFilter: FilterFn<User> = (row, columnId, value, addMeta) => {
   const itemRank = rankItem(String(row.getValue(columnId) ?? ""), value);
   addMeta?.({ itemRank });
   return itemRank.passed;
@@ -284,7 +284,7 @@ export default function UserListTableDemo() {
 
       {/* Table */}
       <div className="overflow-x-auto rounded border">
-        <table className="min-w-[760px] w-full text-sm">
+        <table className="min-w-190 w-full text-sm">
           <thead className="bg-gray-50">
             {table.getHeaderGroups().map((hg) => (
               <tr key={hg.id}>
