@@ -8,17 +8,11 @@ export default async function Page({
     `@/contents/${slug}.mdx`
   );
 
-  return (
-    <main className="flex-1 p-4 w-full max-w-7xl flex flex-col">
-      <article className="flex-1">
-        <Post />
-      </article>
-    </main>
-  );
+  return <Post />;
 }
 
 export function generateStaticParams() {
-  return [{ slug: "less-is-more" }];
+  return [{ slug: "less-is-more" }, { slug: "markdown" }];
 }
 
 export const dynamicParams = false;

@@ -9,7 +9,7 @@ export type DashboardSidebarData = {
 };
 
 export type DashboardSidebarGroupData = {
-  label: string;
+  label?: string;
   menu: DashboardSideBarMenuData;
 };
 

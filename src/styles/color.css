@@ -31,6 +31,8 @@
   --color-accent: light-dark(oklch(0.97 0 0), oklch(0.269 0 0));
   --color-accent-foreground: light-dark(oklch(0.205 0 0), oklch(0.985 0 0));
 
+  --color-success: light-dark(oklch(0.62 0.18 145), oklch(0.72 0.16 145));
+
   --color-destructive: light-dark(
     oklch(0.577 0.245 27.325),
     oklch(0.704 0.191 22.216)
@@ -81,4 +83,104 @@
   );
   --color-sidebar-border: light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%));
   --color-sidebar-ring: light-dark(oklch(0.708 0 0), oklch(0.556 0 0));
+}
+
+@theme static {
+  --color-primary: light-dark(oklch(0.55 0.14 260), oklch(0.7 0.13 260));
+  --color-on-primary: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-primary-container: light-dark(
+    oklch(0.92 0.05 260),
+    oklch(0.3 0.1 260)
+  );
+  --color-on-primary-container: light-dark(
+    oklch(0.25 0.1 260),
+    oklch(0.95 0.04 260)
+  );
+  --color-secondary: light-dark(oklch(0.55 0.06 250), oklch(0.68 0.06 250));
+  --color-on-secondary: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-secondary-container: light-dark(
+    oklch(0.92 0.02 250),
+    oklch(0.32 0.05 250)
+  );
+  --color-on-secondary-container: light-dark(
+    oklch(0.3 0.04 250),
+    oklch(0.94 0.03 250)
+  );
+  --color-tertiary: light-dark(oklch(0.58 0.1 330), oklch(0.72 0.1 330));
+  --color-on-tertiary: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-tertiary-container: light-dark(
+    oklch(0.93 0.04 330),
+    oklch(0.32 0.07 330)
+  );
+  --color-on-tertiary-container: light-dark(
+    oklch(0.3 0.06 330),
+    oklch(0.95 0.04 330)
+  );
+  --color-surface: light-dark(oklch(0.99 0 0), oklch(0.15 0 0));
+  --color-on-surface: light-dark(oklch(0.18 0 0), oklch(0.95 0 0));
+  --color-surface-variant: light-dark(
+    oklch(0.94 0.01 260),
+    oklch(0.25 0.01 260)
+  );
+  --color-on-surface-variant: light-dark(
+    oklch(0.4 0.01 260),
+    oklch(0.8 0.01 260)
+  );
+  --color-surface-container-lowest: light-dark(oklch(1 0 0), oklch(0.12 0 0));
+  --color-surface-container-low: light-dark(oklch(0.98 0 0), oklch(0.18 0 0));
+  --color-surface-container: light-dark(oklch(0.96 0 0), oklch(0.22 0 0));
+  --color-surface-container-high: light-dark(oklch(0.94 0 0), oklch(0.26 0 0));
+  --color-surface-container-highest: light-dark(
+    oklch(0.92 0 0),
+    oklch(0.3 0 0)
+  );
+  --color-outline: light-dark(oklch(0.65 0.01 260), oklch(0.5 0.01 260));
+  --color-outline-variant: light-dark(
+    oklch(0.8 0.01 260),
+    oklch(0.35 0.01 260)
+  );
+  --color-info: light-dark(oklch(0.55 0.14 240), oklch(0.7 0.14 240));
+  --color-on-info: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-info-container: light-dark(oklch(0.92 0.05 240), oklch(0.3 0.1 240));
+  --color-on-info-container: light-dark(
+    oklch(0.25 0.1 240),
+    oklch(0.95 0.05 240)
+  );
+  --color-success: light-dark(oklch(0.55 0.14 145), oklch(0.7 0.13 145));
+  --color-on-success: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-success-container: light-dark(
+    oklch(0.92 0.06 145),
+    oklch(0.3 0.1 145)
+  );
+  --color-on-success-container: light-dark(
+    oklch(0.25 0.1 145),
+    oklch(0.95 0.05 145)
+  );
+  --color-important: light-dark(oklch(0.6 0.16 290), oklch(0.72 0.16 290));
+  --color-on-important: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-important-container: light-dark(
+    oklch(0.93 0.07 290),
+    oklch(0.32 0.12 290)
+  );
+  --color-on-important-container: light-dark(
+    oklch(0.3 0.12 290),
+    oklch(0.95 0.06 290)
+  );
+  --color-warning: light-dark(oklch(0.65 0.16 85), oklch(0.78 0.16 85));
+  --color-on-warning: light-dark(oklch(0.2 0 0), oklch(0.2 0 0));
+  --color-warning-container: light-dark(
+    oklch(0.94 0.08 85),
+    oklch(0.35 0.12 85)
+  );
+  --color-on-warning-container: light-dark(
+    oklch(0.3 0.12 85),
+    oklch(0.96 0.07 85)
+  );
+  --color-error: light-dark(oklch(0.55 0.18 25), oklch(0.7 0.18 25));
+  --color-on-error: light-dark(oklch(0.98 0 0), oklch(0.2 0 0));
+  --color-error-container: light-dark(oklch(0.92 0.08 25), oklch(0.32 0.14 25));
+  --color-on-error-container: light-dark(
+    oklch(0.3 0.14 25),
+    oklch(0.95 0.07 25)
+  );
 }

@@ -36,7 +36,9 @@ export function DashboardSidebarGroup({ dashboardSidebarGroupData }: Props) {
 
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>{dashboardSidebarGroupData.label}</SidebarGroupLabel>
+      {dashboardSidebarGroupData.label && (
+        <SidebarGroupLabel>{dashboardSidebarGroupData.label}</SidebarGroupLabel>
+      )}
       <SidebarGroupContent>
         <SidebarMenu>
           {dashboardSidebarGroupData.menu.items.map((item) => (

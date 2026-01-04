@@ -1,0 +1,646 @@
+import Image from "next/image";
+
+# Markdown and MDX Syntax
+
+## Headings
+
+```
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+```
+
+## Paragraphs
+
+To create paragraphs, use a blank line to separate one or more lines of text.
+
+```
+I really like using Markdown.
+
+I think I'll use it to format all of my documents from now on.
+```
+
+**Output:**
+
+I really like using Markdown.
+
+I think I'll use it to format all of my documents from now on.
+
+## Line Breaks
+
+To create a line break in an `.md` file, you will need to include one of the following:
+
+- Include two spaces at the end of the first line.
+  ```
+  This example  <- Here are two spaces after the word example to create a line break.
+  Will span two lines
+  ```
+
+  **Output:**
+
+  This example
+  Will span two lines
+
+- Include a backslash at the end of the first line.
+
+  ```
+  This example\
+  Will span two lines
+  ```
+
+  **Output:**
+
+  This example\
+  Will span two lines
+
+- Include an HTML single line break tag at the end of the first line.
+
+  ```
+  This example<br/>
+  Will span two lines
+  ```
+
+  **Output:**
+
+  This example<br/>
+  Will span two lines
+
+
+## Styling text
+
+You can indicate emphasis with bold, italic, strikethrough, subscript, superscript, or underline text.
+
+| Style | Syntax | Keyboard shortcut | Example | Output |
+| :---: | :---: | :---: | :---: | :---: |
+| Bold | `** **` or `__ __` | <kbd>Command</kbd>+<kbd>B</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>B</kbd> (Windows/Linux) | `**This is bold text**` | **This is bold text** |
+| Italic | `* *` or `_ _` | <kbd>Command</kbd>+<kbd>I</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>I</kbd> (Windows/Linux) | `_This text is italicized_` | _This text is italicized_ |
+| Strikethrough | `~~ ~~` or `~ ~` | None | `~~This was mistaken text~~` | ~~This was mistaken text~~ |
+| Bold and nested italic | `** **` and `_ _` | None | `**This text is _extremely_ important**` | **This text is _extremely_ important** |
+| All bold and italic | `*** ***` | None | `***All this text is important***` | ***All this text is important*** |
+| Subscript | `<sub> </sub>` | None | `This is a <sub>subscript</sub> text` | This is a <sub>subscript</sub> text |
+| Superscript | `<sup> </sup>` | None | `This is a <sup>superscript</sup> text` | This is a <sup>superscript</sup> text |
+| Underline | `<ins> </ins>` | None | `This is an <ins>underlined</ins> text` | This is an <ins>underlined</ins> text |
+
+## Blockquotes
+
+To create a blockquote, add a <kbd>></kbd> in front of a paragraph.
+
+```
+Text that is not a quote
+
+> Text that is a quote
+```
+
+**Output:**
+
+> Text that is a quote
+
+## Lists
+
+You can organize items into ordered and unordered lists.
+
+### Ordered Lists
+
+To create an ordered list, add line items with numbers followed by periods. Indent one or more items to create a nested list.
+
+```
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+        1. Indented item
+        2. Indented item
+            1. Indented item
+            2. Indented item
+4. Fourth item
+```
+
+**Output:**
+
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+        1. Indented item
+        2. Indented item
+            1. Indented item
+            2. Indented item
+4. Fourth item
+
+### Unordered Lists
+
+To create an unordered list, add dashes <kbd>-</kbd>, asterisks <kbd>*</kbd>, or plus signs <kbd>+</kbd> in front of line items. Indent one or more items to create a nested list.
+
+```
+- First item
+- Second item
+```
+
+**Output:**
+
+- First item
+- Second item
+
+```
+* First item
+* Second item
+```
+
+**Output:**
+
+* First item
+* Second item
+
+```
++ First item
++ Second item
+```
+
+**Output:**
+
++ First item
++ Second item
+
+```
+- First item
+- Second item
+    - Indented item
+    - Indented item
+        - Indented item
+        - Indented item
+            - Indented item
+            - Indented item
+- Third item
+```
+
+**Output:**
+
+- First item
+- Second item
+    - Indented item
+    - Indented item
+        - Indented item
+        - Indented item
+            - Indented item
+            - Indented item
+- Third item
+
+### Starting Unordered List Items With Numbers
+
+If you need to start an unordered list item with a number followed by a period, you can use a backslash <kbd>\\</kbd> to escape the period.
+
+```
+- 1968\. A great year!
+```
+
+**Output:**
+
+- 1968\. A great year!
+
+### Adding Elements in Lists
+
+To add another element in a list while preserving the continuity of the list, indent the element four spaces or one tab, as shown in the following examples.
+
+```
+- This is the first list item.
+- Here's the second list item.
+
+    I need to add another paragraph below the second list item.
+
+- And here's the third list item.
+```
+
+**Output:**
+
+- This is the first list item.
+- Here's the second list item.
+
+    I need to add another paragraph below the second list item.
+
+- And here's the third list item.
+
+## Task Lists
+
+To create a task list, preface list items with a hyphen and space followed by `[ ]`. To mark a task as complete, use `[x]`.
+
+```
+- [x] Write the press release
+    - [x] Indented item
+    - [ ] Indented item
+        - [x] Indented item
+        - [ ] Indented item
+- [ ] Update the website
+- [ ] Contact the media
+```
+
+**Output:**
+
+- [x] Write the press release
+    - [x] Indented item
+    - [ ] Indented item
+        - [x] Indented item
+        - [ ] Indented item
+- [ ] Update the website
+- [ ] Contact the media
+
+## Links
+
+To create a link, enclose the link text in brackets (e.g., [Google]) and then follow it immediately with the URL in parentheses (e.g., (https://google.com)).
+
+```
+[Google](https://google.com)
+```
+
+**Output:**
+
+[Google](https://google.com)
+
+### Linking to Heading IDs
+
+You can link to headings with custom IDs in the file by creating a standard link with a number sign <kbd>\#</kbd> followed by the custom heading ID. These are commonly referred to as anchor links.
+
+```
+[Link Text](#heading-id) <- This will navigate users to a heading in current page.
+
+[Link Text](URL#heading-id) <- This will navigate users to a heading with the new URL.
+```
+
+### Link Targets
+
+Some people like creating links that open in new tabs or windows, you can use HTML to create these links.
+
+```
+<a href="https://google.com" target="_blank">Google</a>
+```
+
+**Output:**
+
+<a href="https://google.com" target="_blank">Google</a>
+
+### Adding Titles
+
+You can optionally add a title for a link. This will appear as a tooltip when the user hovers over the link. To add a title, enclose it in quotation marks after the URL.
+
+```
+[Google](https://google.com "A search engine.")
+```
+
+**Output:**
+
+[Google](https://google.com "A search engine")
+
+### Automatic URLs and Email Addresses Link
+
+This blog automatically turn URLs and Email Addresses into links.
+
+```
+https://google.com
+
+youremail@email.com
+```
+
+**Output:**
+
+https://google.com
+
+youremail@email.com
+
+## Images
+
+To add an image, add an exclamation mark <kbd>!</kbd>, followed by alt text in brackets, and the path or URL to the image asset in parentheses. You can optionally add a title in quotation marks after the path or URL.
+
+```
+![Alt Text](/link-to-your-image "title")
+```
+
+> [!NOTE]
+> Because Markdown syntax doesn't support setting image width and height, it's better to use the HTML `img` tag with `width` and `height` attributes to improve user experience.
+>
+> And since we are using Nextjs, we can use the `Image` component.
+
+```tsx
+// Import statement should be on the top of the MDX content
+import Image from "next/image";
+
+<Image alt="koala" src="/assets/images/koala.webp" width={100} height={150} />
+```
+
+**Output:**
+
+<Image alt="koala" src="/assets/images/koala.webp" width={100} height={150} />
+
+## Code
+
+### Inline Code
+
+To denote a word or phrase as code, enclose it in backticks <kbd>\`</kbd>.
+
+```
+At the command prompt, type `nano`.
+```
+
+**Output:**
+
+At the command prompt, type `nano`.
+
+### Escaping Backticks
+
+If the word or phrase you want to denote as code includes one or more backticks, you can escape it by enclosing the word or phrase in double backticks <kbd>\`</kbd><kbd>\`</kbd>.
+
+```
+``Use `code` in your Markdown file.``
+```
+
+**Output:**
+
+``Use `code` in your Markdown file.``
+
+### Code Blocks
+
+To create code blocks, use triple backticks <kbd>\`</kbd><kbd>\`</kbd><kbd>\`</kbd>.
+
+````
+```
+A code block
+```
+````
+
+**Output:**
+
+```
+A code block
+```
+
+<a href="https://stackoverflow.com/a/31834381" target="_blank">How to escape triple backticks surrounded by a codeblock in Markdown.</a>
+
+### Syntax Highlighting
+
+To add syntax highlighting, specify a language next to the backticks before the code block.
+
+````
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+````
+
+**Output:**
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+> [!NOTE]
+> Check [Rehype Pretty Code](https://rehype-pretty.pages.dev/) to see how to highlight lines and words in code blocks.
+
+## Horizontal Rules
+
+To create a horizontal rule, use three or more asterisks <kbd>\*</kbd><kbd>\*</kbd><kbd>\*</kbd>, dashes <kbd>\-</kbd><kbd>\-</kbd><kbd>\-</kbd>, or underscores <kbd>\_</kbd><kbd>\_</kbd><kbd>\_</kbd> on a line by themselves.
+
+```
+***
+
+---
+
+_________________
+```
+
+**Output of all three looks identical:**
+
+_________________
+
+## Table
+
+To add a table, use three or more hyphens <kbd>-</kbd><kbd>-</kbd><kbd>-</kbd> to create each column’s header, and use pipes <kbd>|</kbd> to separate each column. For compatibility, you should also add a pipe on either end of the row.
+
+```
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+```
+
+**Output:**
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+### Alignment
+
+You can align text in the columns to the left, right, or center by adding a colon <kbd>:</kbd> to the left, right, or on both side of the hyphens within the header row.
+
+```
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+```
+
+**Output:**
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+## Math
+
+With `remark-math` and `rehype-katex` plugins, we can write `LaTeX` math.
+
+```
+Lift($$L$$) can be determined by Lift Coefficient ($$C_L$$) like the following
+equation.
+
+$$
+L = \frac{1}{2} \rho v^2 S C_L
+$$
+```
+
+**Output:**
+
+Lift($$L$$) can be determined by Lift Coefficient ($$C_L$$) like the following
+equation.
+
+$$
+L = \frac{1}{2} \rho v^2 S C_L
+$$
+
+### Long and Large Equations
+
+```math
+f(x) = \sum_{n=1}^{\infty} \left( \frac{(-1)^n}{(2n+1)!} x^{2n+1} + \frac{1}{n^2} \sin\left(\frac{n \pi x}{L}\right) \cos\left(\omega_n t + \phi_n\right) + \int_0^\infty \frac{e^{-st}}{s^2 + \omega^2} \, ds \right) + \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-x^2/2} \, dx + \left( \prod_{k=1}^{100} \left(1 + \frac{x^2}{k^2 \pi^2}\right) \right) + \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n
+```
+
+```math
+A = \begin{bmatrix}
+a_{1,1} & a_{1,2} & a_{1,3} & \cdots & a_{1,100} \\
+a_{2,1} & a_{2,2} & a_{2,3} & \cdots & a_{2,100} \\
+a_{3,1} & a_{3,2} & a_{3,3} & \cdots & a_{3,100} \\
+\vdots  & \vdots  & \vdots  & \ddots & \vdots \\
+a_{100,1} & a_{100,2} & a_{100,3} & \cdots & a_{100,100}
+\end{bmatrix}
+```
+
+## Github-style Footnotes
+
+You can add footnotes to your content by using this bracket syntax:
+
+```
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
+```
+
+**Output:**
+
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+Also see the [Footnotes](#footnote-label).
+
+> [!NOTE]
+> The position of a footnote in your Markdown does not influence where the footnote will be rendered. You can write a footnote right after your reference to the footnote, and the footnote will still render at the bottom of the Markdown.
+
+## Github-style Alerts
+
+To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Five types of alerts are available:
+
+```
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+```
+
+Here are the rendered alerts:
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+## Collapsed Sections
+
+You can streamline your Markdown by creating a collapsed section with the `<details>` tag.
+
+````
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+You can add text within a collapsed section.
+
+You can add an image or a code block, too.
+
+```ruby
+puts "Hello World"
+```
+
+</details>
+````
+
+**Output:**
+
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+You can add text within a collapsed section.
+
+You can add an image or a code block, too.
+
+```
+Hello!
+```
+
+</details>
+
+## Escaping Characters
+
+To display a literal character that would otherwise be used to format text in a Markdown document, add a backslash (\) in front of the character.
+
+```
+\* Without the backslash, this would be a bullet in an unordered list.
+The rendered output looks like this:
+```
+
+\* Without the backslash, this would be a bullet in an unordered list.
+
+### Characters You Can Escape
+
+| Character | Name |
+| :---:| :---: |
+| \\ | backslash |
+| \` | backtick |
+| \* | asterisk |
+| \_ | underscore |
+| \{ \} | curly braces |
+| \[ \] | brackets |
+| \< \> | angle brackets |
+| \( \) | parentheses |
+| \#	| pound sign |
+| \+ | plus sign |
+| \- | minus sign (hyphen) |
+| \. | dot |
+| \! | exclamation mark |
+| \| | pipe |
+
+## Symbols
+
+Markdown doesn’t provide special syntax for symbols. However, in most cases, you can copy and paste whatever symbol you want to use into your Markdown document. For example, if you need to display Pi (π), just find the symbol on a webpage and copy and paste it into your document. The symbol should appear as expected in the rendered output.
+
+Alternatively, if your Markdown application supports HTML, you can use the HTML entity for whatever symbol you want to use. For example, if you want to display the copyright sign (©), you can copy and paste the HTML entity for copyright (`&copy;`) into your Markdown document.
+
+Here’s a partial list of HTML entities for symbols:
+
+- Copyright (©) — `&copy;`
+- Registered trademark (®) — `&reg;`
+- Trademark (™) — `&trade;`
+- Euro (€) — `&euro;`
+- Left arrow (←) — `&larr;`
+- Up arrow (↑) — `&uarr;`
+- Right arrow (→) — `&rarr;`
+- Down arrow (↓) — `&darr;`
+- Degree (°) — `&#176;`
+- Pi (π) — `&#960;`
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.

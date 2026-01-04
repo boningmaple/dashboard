@@ -16,8 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        />
+      </head>
       <body
-        className={`${roboto.variable} ${roboto_serif.variable} ${roboto_mono.variable} antialiased font-sans`}
+        className={`${roboto.variable} ${roboto_serif.variable} ${roboto_mono.variable}`}
       >
         <ThemeProvider>
           <NextTopLoader color="var(--color-muted-foreground)" />

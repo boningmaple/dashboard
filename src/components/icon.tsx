@@ -13,6 +13,7 @@ import {
   LockIcon,
   type LucideProps,
   MessageCircleQuestionMarkIcon,
+  PaletteIcon,
   PhoneIcon,
   ServerOffIcon,
   Table2Icon,
@@ -39,6 +40,7 @@ const ICON_MAP = {
   "table-2": Table2Icon,
   "file-check-corner": FileCheckCornerIcon,
   library: LibraryIcon,
+  palette: PaletteIcon,
   // Brand Icons
   shadcnui: SiShadcnui,
 } as const;

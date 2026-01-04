@@ -1,12 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./dark-mode.css";
+@import "./typography.css";
 @import "./color.css";
-@import "./font.css";
+@import "./dark-mode.css";
+@import "./markdown.css";
 
 * {
   @apply border-border outline-ring/50;
 }
+
 body {
-  @apply bg-background text-foreground;
+  @apply font-sans;
+  @apply antialiased;
+  @apply bg-surface text-on-surface;
 }

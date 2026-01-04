@@ -6,7 +6,6 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
   return {
     dashboardSidebarGroups: {
       blogGroup: {
-        label: "Blog",
         menu: {
           items: [
             {
@@ -17,15 +16,33 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Less is More",
                   url: "/blog/less-is-more",
                 },
+                {
+                  title: "Markdown",
+                  url: "/blog/markdown",
+                },
               ],
             },
           ],
         },
       },
       designSystemGroup: {
-        label: "Design System",
         menu: {
-          items: [],
+          items: [
+            {
+              title: "Design System",
+              icon: "palette",
+              items: [
+                {
+                  title: "Typography",
+                  url: "/design-system/typography",
+                },
+                {
+                  title: "Color",
+                  url: "/design-system/color",
+                },
+              ],
+            },
+          ],
         },
       },
       pagesGroup: {
