@@ -8,7 +8,7 @@ export default async function Page({
   const { slug } = await params;
   try {
     const { default: Post, _frontmatter } = await import(
-      `@/features/design-system/pages/${slug}.mdx`
+      `@/contents/${slug}.mdx`
     );
     return <Post />;
   } catch (error) {
