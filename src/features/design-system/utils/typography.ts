@@ -1,7 +1,4 @@
-const typefaceBrand = "Roboto";
-const typefacePlain = "Roboto";
 const weightRegular = 400;
-const weightMedium = 500;
 const weightBold = 700;
 
 function pxToRem(px: number, base = 16) {

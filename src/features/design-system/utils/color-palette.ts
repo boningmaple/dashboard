@@ -1,7 +1,7 @@
 import {
-  TonalPalette,
   argbFromHex,
   hexFromArgb,
+  TonalPalette,
 } from "@material/material-color-utilities";
 
 const colorRoles = [

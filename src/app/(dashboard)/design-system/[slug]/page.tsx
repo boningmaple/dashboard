@@ -18,7 +18,11 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return [{ slug: "color" }, { slug: "component-button" }];
+  return [
+    { slug: "color" },
+    { slug: "component-button" },
+    { slug: "component-kbd" },
+  ];
 }
 
 export const dynamicParams = false;

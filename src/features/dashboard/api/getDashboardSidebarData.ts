@@ -47,6 +47,10 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                       title: "Button",
                       url: "/design-system/component-button",
                     },
+                    {
+                      title: "Kbd",
+                      url: "/design-system/component-kbd",
+                    },
                   ],
                 },
               ],
