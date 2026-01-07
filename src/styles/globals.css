@@ -14,3 +14,8 @@ body {
   @apply antialiased;
   @apply bg-surface text-on-surface;
 }
+
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}

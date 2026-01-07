@@ -10,9 +10,9 @@ import { Spinner } from "@/components/ui/spinner";
 export default function Page() {
   return (
     <main className="flex-1 flex flex-col gap-6 p-4 w-full max-w-7xl mx-auto">
-      <h2 className="text-xl font-semibold">Primary Button</h2>
+      <h2 className="text-xl font-semibold">Default Button</h2>
       <div className="flex gap-6 items-center flex-wrap">
-        <Button>Button</Button>
+        <Button>Default</Button>
       </div>
       <h2 className="text-xl font-semibold">Size</h2>
       <div className="flex gap-6 items-center flex-wrap">
@@ -38,8 +38,14 @@ export default function Page() {
       <h2 className="text-xl font-semibold">Variant</h2>
       <div className="flex gap-6 items-center flex-wrap">
         <div className="flex gap-2 items-center">
-          <Button>Button</Button>
+          <Button>Default</Button>
           <Button size="icon">
+            <CircleFadingArrowUpIcon />
+          </Button>
+        </div>
+        <div className="flex gap-2 items-center">
+          <Button variant="primary">Primary</Button>
+          <Button variant="primary" size="icon">
             <CircleFadingArrowUpIcon />
           </Button>
         </div>
@@ -50,26 +56,20 @@ export default function Page() {
           </Button>
         </div>
         <div className="flex gap-2 items-center">
-          <Button variant="secondary">Secondary</Button>
-          <Button size="icon" variant="secondary">
-            <CircleFadingArrowUpIcon />
-          </Button>
-        </div>
-        <div className="flex gap-2 items-center">
-          <Button variant="ghost">Ghost</Button>
-          <Button size="icon" variant="ghost">
-            <CircleFadingArrowUpIcon />
-          </Button>
-        </div>
-        <div className="flex gap-2 items-center">
-          <Button variant="destructive">Destructive</Button>
-          <Button size="icon" variant="destructive">
+          <Button variant="text">Text</Button>
+          <Button variant="text" size="icon">
             <CircleFadingArrowUpIcon />
           </Button>
         </div>
         <div className="flex gap-2 items-center">
           <Button variant="link">Link</Button>
           <Button size="icon" variant="link">
+            <CircleFadingArrowUpIcon />
+          </Button>
+        </div>
+        <div className="flex gap-2 items-center">
+          <Button variant="error">Error</Button>
+          <Button variant="error" size="icon">
             <CircleFadingArrowUpIcon />
           </Button>
         </div>
@@ -99,7 +99,7 @@ export default function Page() {
       <h2 className="text-xl font-semibold">Others</h2>
       <div className="flex gap-6 items-center flex-wrap">
         <Button
-          variant="ghost"
+          variant="text"
           className="
             rounded-md
             border-2 border-foreground

@@ -40,6 +40,15 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Color",
                   url: "/design-system/color",
                 },
+                {
+                  title: "Components",
+                  items: [
+                    {
+                      title: "Button",
+                      url: "/design-system/component-button",
+                    },
+                  ],
+                },
               ],
             },
           ],
