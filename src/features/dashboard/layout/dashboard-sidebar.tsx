@@ -18,7 +18,7 @@ export default function DashboardSidebar({
   ...props
 }: Props) {
   return (
-    <Sidebar variant="inset" collapsible="icon" {...props}>
+    <Sidebar variant="floating" collapsible="icon" {...props}>
       <SidebarContent>
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
