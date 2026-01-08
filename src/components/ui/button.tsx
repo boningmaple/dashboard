@@ -29,7 +29,7 @@ export const BUTTON_SIZES = {
 const buttonVariants = cva(
   `
   shrink-0 inline-flex items-center justify-center gap-2 whitespace-nowrap
-  text-body-medium rounded-md outline-none transition-all
+  text-label-large rounded-md outline-none transition-all
   disabled:bg-on-surface/10 disabled:text-on-surface/38 disabled:pointer-events-none
   focus-visible:ring-3 focus-visible:ring-outline/50 aria-invalid:ring-error/50
   [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0
