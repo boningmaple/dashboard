@@ -44,8 +44,28 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Components",
                   items: [
                     {
+                      title: "Avatar",
+                      url: "/design-system/component-avatar",
+                    },
+                    {
+                      title: "Badge",
+                      url: "/design-system/component-badge",
+                    },
+                    {
                       title: "Button",
                       url: "/design-system/component-button",
+                    },
+                    {
+                      title: "Card",
+                      url: "/design-system/component-card",
+                    },
+                    {
+                      title: "Chip",
+                      url: "/design-system/component-chip",
+                    },
+                    {
+                      title: "Input",
+                      url: "/design-system/component-input",
                     },
                     {
                       title: "Kbd",

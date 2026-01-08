@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { generatePostStaticParams } from "@/lib/mdx";
 
 export default async function Page({
   params,
@@ -7,9 +8,7 @@ export default async function Page({
 }) {
   const { slug } = await params;
   try {
-    const { default: Post, _frontmatter } = await import(
-      `@/contents/${slug}.mdx`
-    );
+    const { default: Post } = await import(`@/contents/${slug}.mdx`);
     return <Post />;
   } catch (error) {
     console.error(error);
@@ -17,8 +16,8 @@ export default async function Page({
   }
 }
 
-export function generateStaticParams() {
-  return [{ slug: "less-is-more" }, { slug: "markdown" }];
+export async function generateStaticParams() {
+  return await generatePostStaticParams("src/contents");
 }
 
 export const dynamicParams = false;
