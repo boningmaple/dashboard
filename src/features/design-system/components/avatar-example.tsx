@@ -1,37 +1,30 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: This is a example */
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BADGE_VARIANTS, Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { BellIcon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
-type BadgeVariant = keyof typeof BADGE_VARIANTS;
-const BADGE_COUNTS = ["1", "19", "99", "999+"] as const;
-
-export default function BadgeExample() {
+export default function AvatarExample() {
   return (
     <>
-      <h2>Variants</h2>
-      <div className="flex gap-x-8 flex-wrap">
-        {Object.keys(BADGE_VARIANTS).map((variant) => (
-          <div key={variant}>
-            <h3>{variant[0].toUpperCase() + variant.slice(1)}</h3>
-            <div className="flex gap-4 items-center flex-wrap">
-              {/* Small badge – dot only */}
-              <Badge variant={variant as BadgeVariant} size="sm" />
-              {/* Default badge – counts */}
-              {BADGE_COUNTS.map((count) => (
-                <Badge
-                  key={count}
-                  variant={variant as BadgeVariant}
-                  size="default"
-                >
-                  {count}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        ))}
+      <h2>Sizes</h2>
+      <div className="flex items-center gap-4">
+        <Avatar className="size-6">
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <Avatar className="size-10">
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <Avatar className="size-12">
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
       </div>
-      <h2>On Avatar</h2>
+      <h2>With Badge</h2>
       <div className="flex items-center gap-6">
         {/* Dot badge */}
         <div className="relative">
@@ -46,7 +39,7 @@ export default function BadgeExample() {
           />
         </div>
         {/* Count badge */}
-        {BADGE_COUNTS.map((count) => (
+        {["4", "32", "999+"].map((count) => (
           <div key={count} className="relative">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -61,7 +54,7 @@ export default function BadgeExample() {
           </div>
         ))}
       </div>
-      <h2>With Outline Ring on Avatar</h2>
+      <h2>With Outline Ring around Badge</h2>
       <div className="flex items-center gap-6">
         {/* Dot badge */}
         <div className="relative">
@@ -76,7 +69,7 @@ export default function BadgeExample() {
           />
         </div>
         {/* Count badge */}
-        {BADGE_COUNTS.map((count) => (
+        {["4", "32", "999+"].map((count) => (
           <div key={count} className="relative">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -91,21 +84,28 @@ export default function BadgeExample() {
           </div>
         ))}
       </div>
-      <h2>On Icon Button</h2>
-      <div className="flex items-center gap-6">
-        {BADGE_COUNTS.map((count) => (
-          <div key={count} className="relative">
-            <Button variant="text" size="icon" className="rounded-full">
-              <BellIcon />
-            </Button>
-            <Badge
-              variant="error"
-              className="absolute top-0 right-0 translate-x-1/2"
-            >
-              {count}
-            </Badge>
-          </div>
+      <h2>Group</h2>
+      <div className="flex -space-x-2 items-center">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <Avatar key={i} className="size-8 ring-2 ring-surface">
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         ))}
+      </div>
+      <h2>Group with Count</h2>
+      <div className="flex -space-x-2 items-center">
+        {Array.from({ length: 3 }).map((_, i) => (
+          <Avatar key={i} className="size-8 ring-2 ring-surface">
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        ))}
+        <div className="relative">
+          <Avatar className="size-8 ring-2 ring-surface">
+            <AvatarFallback>+9</AvatarFallback>
+          </Avatar>
+        </div>
       </div>
     </>
   );
