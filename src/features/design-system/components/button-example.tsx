@@ -6,6 +6,7 @@ import {
 import { BUTTON_SIZES, BUTTON_VARIANTS, Button } from "@/components/ui/button";
 
 type ButtonVariant = keyof typeof BUTTON_VARIANTS;
+type ButtonSize = keyof typeof BUTTON_SIZES;
 const BUTTON_STATES = [
   "default",
   "hover",
@@ -108,7 +109,7 @@ export default function ButtonExample() {
       <h2>Variants</h2>
       <div className="flex gap-x-8 flex-wrap">
         {Object.keys(BUTTON_VARIANTS).map((variant) => (
-          <div key={variant} className="first:[&>h3]:mt-0">
+          <div key={variant}>
             <h3>{variant[0].toUpperCase() + variant.slice(1)}</h3>
             {BUTTON_STATES.map((state) => (
               <div
@@ -123,12 +124,10 @@ export default function ButtonExample() {
                   return (
                     <Button
                       key={size}
-                      variant={variant as keyof typeof BUTTON_VARIANTS}
-                      size={size as keyof typeof BUTTON_SIZES}
+                      variant={variant as ButtonVariant}
+                      size={size as ButtonSize}
                       className={
-                        BUTTON_STATE_CLASSES[
-                          variant as keyof typeof BUTTON_VARIANTS
-                        ][state]
+                        BUTTON_STATE_CLASSES[variant as ButtonVariant][state]
                       }
                       {...getStateAttrs(state)}
                     >
@@ -150,8 +149,8 @@ export default function ButtonExample() {
               {Object.keys(BUTTON_VARIANTS).map((variant) => (
                 <Button
                   key={variant}
-                  variant={variant as keyof typeof BUTTON_VARIANTS}
-                  size={size as keyof typeof BUTTON_SIZES}
+                  variant={variant as ButtonVariant}
+                  size={size as ButtonSize}
                 >
                   <ArrowLeftCircleIcon />
                   {variant}
@@ -170,8 +169,8 @@ export default function ButtonExample() {
               {Object.keys(BUTTON_VARIANTS).map((variant) => (
                 <Button
                   key={variant}
-                  variant={variant as keyof typeof BUTTON_VARIANTS}
-                  size={size as keyof typeof BUTTON_SIZES}
+                  variant={variant as ButtonVariant}
+                  size={size as ButtonSize}
                 >
                   {variant}
                   <ArrowRightIcon />
@@ -190,8 +189,8 @@ export default function ButtonExample() {
               {Object.keys(BUTTON_VARIANTS).map((variant) => (
                 <Button
                   key={variant}
-                  variant={variant as keyof typeof BUTTON_VARIANTS}
-                  size={size as keyof typeof BUTTON_SIZES}
+                  variant={variant as ButtonVariant}
+                  size={size as ButtonSize}
                 >
                   <PanelLeftCloseIcon />
                 </Button>
