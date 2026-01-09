@@ -1,14 +1,5 @@
 /* Shadcn UI Color */
 @theme inline {
-  /* Radius */
-  --radius-lg: 0.625rem;
-  --radius-md: calc(0.625rem - 2px);
-  --radius-sm: calc(0.625rem - 4px);
-  --radius-xl: calc(0.625rem + 4px);
-  --radius-2xl: calc(0.625rem + 8px);
-  --radius-3xl: calc(0.625rem + 12px);
-  --radius-4xl: calc(0.625rem + 16px);
-
   /* Core colors */
   --color-background: var(--color-surface);
   --color-foreground: var(--color-on-surface);

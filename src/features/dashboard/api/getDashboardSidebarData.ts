@@ -34,11 +34,23 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               items: [
                 {
                   title: "Typography",
-                  url: "/design-system/typography",
+                  url: "/design-system/style-typography",
                 },
                 {
                   title: "Color",
-                  url: "/design-system/color",
+                  url: "/design-system/style-color",
+                },
+                {
+                  title: "Shape",
+                  url: "/design-system/style-shape"
+                },
+                {
+                  title: "Elevation",
+                  url: "/design-system/style-elevation"
+                },
+                {
+                  title: "Motion",
+                  url: "/design-system/style-motion"
                 },
                 {
                   title: "Components",
