@@ -43,12 +43,6 @@ export default function DashboardSidebar({
             dashboardSidebarData.dashboardSidebarGroups.blocksGroup
           }
         />
-        <SidebarSeparator className="mx-0" />
-        <DashboardSidebarGroup
-          dashboardSidebarGroupData={
-            dashboardSidebarData.dashboardSidebarGroups.componentsGroup
-          }
-        />
       </SidebarContent>
     </Sidebar>
   );

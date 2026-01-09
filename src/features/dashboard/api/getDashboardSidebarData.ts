@@ -234,27 +234,6 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
           ],
         },
       },
-      componentsGroup: {
-        label: "Components",
-        menu: {
-          items: [
-            {
-              title: "Shadcn UI",
-              icon: "shadcnui",
-              items: [
-                {
-                  title: "Button",
-                  url: "/components/shadcnui/button",
-                },
-                {
-                  title: "Input",
-                  url: "/components/shadcnui/input",
-                },
-              ],
-            },
-          ],
-        },
-      },
     },
   };
 }

@@ -15,7 +15,7 @@ export default function NotFoundError() {
         does not exist or might have been removed.
       </p>
       <div className="mt-6 flex gap-4">
-        <Button variant="outline" onClick={() => router.back()}>
+        <Button variant="outlined" onClick={() => router.back()}>
           Go Back
         </Button>
         <Button asChild>

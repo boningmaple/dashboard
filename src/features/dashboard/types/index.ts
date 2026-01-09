@@ -4,7 +4,6 @@ export type DashboardSidebarData = {
     designSystemGroup: DashboardSidebarGroupData;
     pagesGroup: DashboardSidebarGroupData;
     blocksGroup: DashboardSidebarGroupData;
-    componentsGroup: DashboardSidebarGroupData;
   };
 };
 

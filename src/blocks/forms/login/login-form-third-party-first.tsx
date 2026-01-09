@@ -27,11 +27,11 @@ export default function LoginFormThirdPartyFirst({
           <form>
             <FieldGroup>
               <Field className="grid grid-cols-2">
-                <Button variant="outline" type="button">
+                <Button variant="outlined" type="button">
                   <SiApple />
                   Apple
                 </Button>
-                <Button variant="outline" type="button">
+                <Button variant="outlined" type="button">
                   <SiGoogle />
                   Google
                 </Button>

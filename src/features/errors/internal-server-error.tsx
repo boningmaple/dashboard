@@ -14,7 +14,7 @@ export default function InternalServerError() {
         We apologize for the inconvenience. <br /> Please try again later.
       </p>
       <div className="mt-6 flex gap-4">
-        <Button variant="outline" onClick={() => router.back()}>
+        <Button variant="outlined" onClick={() => router.back()}>
           Go Back
         </Button>
         <Button asChild>
