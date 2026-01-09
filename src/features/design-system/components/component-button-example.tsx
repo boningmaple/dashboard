@@ -36,7 +36,7 @@ const BUTTON_STATE_CLASSES: Record<
     disabled: "",
     invalid: "data-focus:ring-3 data-focus:ring-error/50",
   },
-  outline: {
+  outlined: {
     default: "",
     hover: "data-hover:bg-surface-variant/25",
     active: "data-active:bg-surface-variant/50",

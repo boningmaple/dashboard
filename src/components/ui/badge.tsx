@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 export const BADGE_VARIANTS = {
   default: "bg-on-surface text-surface",
   primary: "bg-primary text-on-primary",
-  error: "bg-error text-white",
-  success: "bg-success text-white",
-  warning: "bg-warning text-white",
+  error: "bg-error text-on-error",
+  success: "bg-success text-on-success",
+  warning: "bg-warning text-on-warning",
 };
 
 export const BADGE_SIZES = {
@@ -17,7 +17,7 @@ export const BADGE_SIZES = {
 
 const badgeVariants = cva(
   `shrink-0 inline-flex items-center justify-center gap-1 whitespace-nowrap
-  text-label-small rounded-full outline-none transition-all
+  text-label-small font-medium rounded-full outline-none transition-all
   [&>svg]:size-3 [&>svg]:pointer-events-none
   `,
   {

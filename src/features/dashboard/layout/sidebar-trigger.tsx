@@ -17,19 +17,15 @@ export default function DashboardSidebarTrigger({
     <Button
       data-sidebar="trigger"
       data-slot="sidebar-trigger"
-      size="icon-sm"
-      variant="outline"
+      size="icon-xs"
+      variant="outlined"
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
       }}
       {...props}
     >
-      {isOpen ? (
-        <PanelLeftCloseIcon className="scale-115" />
-      ) : (
-        <PanelLeftOpenIcon className="scale-115" />
-      )}
+      {isOpen ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );
