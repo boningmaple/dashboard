@@ -1,7 +1,7 @@
+import { BellIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { BADGE_VARIANTS, Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { BellIcon } from "lucide-react";
 
 type BadgeVariant = keyof typeof BADGE_VARIANTS;
 const BADGE_COUNTS = ["1", "19", "99", "999+"] as const;

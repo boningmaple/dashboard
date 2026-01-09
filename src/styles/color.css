@@ -24,16 +24,26 @@
   --color-card-foreground: var(--color-on-surface);
 
   /* Charts */
-  --color-chart-1: light-dark(oklch(0.646 0.222 41.116),
-      oklch(0.488 0.243 264.376));
-  --color-chart-2: light-dark(oklch(0.6 0.118 184.704),
-      oklch(0.696 0.17 162.48));
-  --color-chart-3: light-dark(oklch(0.398 0.07 227.392),
-      oklch(0.769 0.188 70.08));
-  --color-chart-4: light-dark(oklch(0.828 0.189 84.429),
-      oklch(0.627 0.265 303.9));
-  --color-chart-5: light-dark(oklch(0.769 0.188 70.08),
-      oklch(0.645 0.246 16.439));
+  --color-chart-1: light-dark(
+    oklch(0.646 0.222 41.116),
+    oklch(0.488 0.243 264.376)
+  );
+  --color-chart-2: light-dark(
+    oklch(0.6 0.118 184.704),
+    oklch(0.696 0.17 162.48)
+  );
+  --color-chart-3: light-dark(
+    oklch(0.398 0.07 227.392),
+    oklch(0.769 0.188 70.08)
+  );
+  --color-chart-4: light-dark(
+    oklch(0.828 0.189 84.429),
+    oklch(0.627 0.265 303.9)
+  );
+  --color-chart-5: light-dark(
+    oklch(0.769 0.188 70.08),
+    oklch(0.645 0.246 16.439)
+  );
 
   /* Sidebar */
   --color-sidebar: var(--color-surface-container);
@@ -52,40 +62,58 @@
      ------------------------------------------------------------------------ */
   --color-primary: light-dark(oklch(0.53 0.12 255), oklch(0.78 0.1 255));
   --color-on-primary: light-dark(oklch(1 0 0), oklch(0.35 0.12 255));
-  --color-primary-container: light-dark(oklch(0.9 0.05 255),
-      oklch(0.45 0.12 255));
-  --color-on-primary-container: light-dark(oklch(0.38 0.12 255),
-      oklch(0.9 0.05 255));
+  --color-primary-container: light-dark(
+    oklch(0.9 0.05 255),
+    oklch(0.45 0.12 255)
+  );
+  --color-on-primary-container: light-dark(
+    oklch(0.38 0.12 255),
+    oklch(0.9 0.05 255)
+  );
   --color-secondary: light-dark(oklch(0.55 0.03 255), oklch(0.75 0.04 255));
   --color-on-secondary: light-dark(oklch(1 0 0), oklch(0.35 0.03 255));
-  --color-secondary-container: light-dark(oklch(0.9 0.03 255),
-      oklch(0.42 0.03 255));
-  --color-on-secondary-container: light-dark(oklch(0.38 0.03 255),
-      oklch(0.9 0.03 255));
+  --color-secondary-container: light-dark(
+    oklch(0.9 0.03 255),
+    oklch(0.42 0.03 255)
+  );
+  --color-on-secondary-container: light-dark(
+    oklch(0.38 0.03 255),
+    oklch(0.9 0.03 255)
+  );
   --color-tertiary: light-dark(oklch(0.55 0.05 330), oklch(0.75 0.05 330));
   --color-on-tertiary: light-dark(oklch(1 0 0), oklch(0.35 0.05 330));
-  --color-tertiary-container: light-dark(oklch(0.92 0.04 330),
-      oklch(0.45 0.05 330));
-  --color-on-tertiary-container: light-dark(oklch(0.38 0.05 330),
-      oklch(0.92 0.04 330));
+  --color-tertiary-container: light-dark(
+    oklch(0.92 0.04 330),
+    oklch(0.45 0.05 330)
+  );
+  --color-on-tertiary-container: light-dark(
+    oklch(0.38 0.05 330),
+    oklch(0.92 0.04 330)
+  );
 
   /* ------------------------------------------------------------------------
      Surface system
      ------------------------------------------------------------------------ */
   --color-surface: light-dark(oklch(0.98 0 0), oklch(0.17 0 0));
   --color-on-surface: light-dark(oklch(0.2 0 0), oklch(0.9 0 0));
-  --color-surface-variant: light-dark(oklch(0.88 0.01 260),
-      oklch(0.4 0.01 260));
-  --color-on-surface-variant: light-dark(oklch(0.45 0.01 260),
-      oklch(0.78 0.01 260));
+  --color-surface-variant: light-dark(
+    oklch(0.88 0.01 260),
+    oklch(0.4 0.01 260)
+  );
+  --color-on-surface-variant: light-dark(
+    oklch(0.45 0.01 260),
+    oklch(0.78 0.01 260)
+  );
   --color-surface-dim: light-dark(oklch(0.88 0 0), oklch(0 0 0));
   --color-surface-bright: light-dark(oklch(1 0 0), oklch(0.32 0 0));
   --color-surface-container-lowest: light-dark(oklch(1 0 0), oklch(0.14 0 0));
   --color-surface-container-low: light-dark(oklch(0.96 0 0), oklch(0.2 0 0));
   --color-surface-container: light-dark(oklch(0.94 0 0), oklch(0.22 0 0));
   --color-surface-container-high: light-dark(oklch(0.92 0 0), oklch(0.28 0 0));
-  --color-surface-container-highest: light-dark(oklch(0.9 0 0),
-      oklch(0.32 0 0));
+  --color-surface-container-highest: light-dark(
+    oklch(0.9 0 0),
+    oklch(0.32 0 0)
+  );
   /* Surface tint is typically the brand color used for elevation overlays */
   --color-surface-tint: light-dark(oklch(0.53 0.12 255), oklch(0.78 0.1 255));
 
@@ -93,8 +121,10 @@
      Outlines + shadowing
      ------------------------------------------------------------------------ */
   --color-outline: light-dark(oklch(0.55 0.01 260), oklch(0.65 0.01 260));
-  --color-outline-variant: light-dark(oklch(0.82 0.01 260),
-      oklch(0.4 0.01 260));
+  --color-outline-variant: light-dark(
+    oklch(0.82 0.01 260),
+    oklch(0.4 0.01 260)
+  );
   --color-shadow: oklch(0 0 0);
   --color-scrim: oklch(0 0 0);
 
@@ -103,8 +133,10 @@
      ------------------------------------------------------------------------ */
   --color-inverse-surface: light-dark(oklch(0.3 0 0), oklch(0.9 0 0));
   --color-inverse-on-surface: light-dark(oklch(0.9 0 0), oklch(0.3 0 0));
-  --color-inverse-primary: light-dark(oklch(0.78 0.1 255),
-      oklch(0.53 0.12 255));
+  --color-inverse-primary: light-dark(
+    oklch(0.78 0.1 255),
+    oklch(0.53 0.12 255)
+  );
 
   /* ------------------------------------------------------------------------
      Error / Info / Success / Important / Warning
@@ -115,26 +147,42 @@
   --color-on-error-container: light-dark(oklch(0.4 0.2 30), oklch(0.9 0.1 30));
   --color-info: light-dark(oklch(0.56 0.16 250), oklch(0.78 0.14 250));
   --color-on-info: light-dark(oklch(1 0 0), oklch(0.32 0.12 250));
-  --color-info-container: light-dark(oklch(0.92 0.06 250),
-      oklch(0.42 0.14 250));
-  --color-on-info-container: light-dark(oklch(0.35 0.14 250),
-      oklch(0.92 0.06 250));
+  --color-info-container: light-dark(
+    oklch(0.92 0.06 250),
+    oklch(0.42 0.14 250)
+  );
+  --color-on-info-container: light-dark(
+    oklch(0.35 0.14 250),
+    oklch(0.92 0.06 250)
+  );
   --color-success: light-dark(oklch(0.58 0.14 145), oklch(0.78 0.13 145));
   --color-on-success: light-dark(oklch(1 0 0), oklch(0.32 0.12 145));
-  --color-success-container: light-dark(oklch(0.92 0.07 145),
-      oklch(0.42 0.14 145));
-  --color-on-success-container: light-dark(oklch(0.34 0.14 145),
-      oklch(0.92 0.07 145));
+  --color-success-container: light-dark(
+    oklch(0.92 0.07 145),
+    oklch(0.42 0.14 145)
+  );
+  --color-on-success-container: light-dark(
+    oklch(0.34 0.14 145),
+    oklch(0.92 0.07 145)
+  );
   --color-important: light-dark(oklch(0.55 0.17 305), oklch(0.76 0.15 305));
   --color-on-important: light-dark(oklch(1 0 0), oklch(0.32 0.14 305));
-  --color-important-container: light-dark(oklch(0.92 0.08 305),
-      oklch(0.44 0.15 305));
-  --color-on-important-container: light-dark(oklch(0.35 0.15 305),
-      oklch(0.92 0.08 305));
+  --color-important-container: light-dark(
+    oklch(0.92 0.08 305),
+    oklch(0.44 0.15 305)
+  );
+  --color-on-important-container: light-dark(
+    oklch(0.35 0.15 305),
+    oklch(0.92 0.08 305)
+  );
   --color-warning: light-dark(oklch(0.72 0.15 85), oklch(0.82 0.14 85));
   --color-on-warning: light-dark(oklch(0.2 0.05 85), oklch(0.3 0.06 85));
-  --color-warning-container: light-dark(oklch(0.94 0.1 85),
-      oklch(0.52 0.14 85));
-  --color-on-warning-container: light-dark(oklch(0.3 0.08 85),
-      oklch(0.94 0.1 85));
+  --color-warning-container: light-dark(
+    oklch(0.94 0.1 85),
+    oklch(0.52 0.14 85)
+  );
+  --color-on-warning-container: light-dark(
+    oklch(0.3 0.08 85),
+    oklch(0.94 0.1 85)
+  );
 }

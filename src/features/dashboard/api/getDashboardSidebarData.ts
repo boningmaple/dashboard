@@ -42,15 +42,15 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                 },
                 {
                   title: "Shape",
-                  url: "/design-system/style-shape"
+                  url: "/design-system/style-shape",
                 },
                 {
                   title: "Elevation",
-                  url: "/design-system/style-elevation"
+                  url: "/design-system/style-elevation",
                 },
                 {
                   title: "Motion",
-                  url: "/design-system/style-motion"
+                  url: "/design-system/style-motion",
                 },
                 {
                   title: "Components",
