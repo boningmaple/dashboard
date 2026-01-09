@@ -12,7 +12,7 @@ export const BADGE_VARIANTS = {
 
 export const BADGE_SIZES = {
   sm: "w-2 h-2",
-  default: "w-fit min-w-4 min-h-4 px-1",
+  default: "w-fit h-fit min-w-4 min-h-4 px-1",
 } as const;
 
 const badgeVariants = cva(
