@@ -95,7 +95,7 @@ export default function BadgeExample() {
       <div className="flex items-center gap-6">
         {BADGE_COUNTS.map((count) => (
           <div key={count} className="relative">
-            <Button variant="text" size="icon" className="rounded-full">
+            <Button variant="text" size="icon-xs" className="rounded-full">
               <BellIcon />
             </Button>
             <Badge
