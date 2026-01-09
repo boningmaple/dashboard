@@ -9,7 +9,7 @@
 =                             Markdown Headings                              =
 ============================================================================*/
   .markdown :where(h1):not(:where(.not-markdown, .not-markdown *)) {
-    @apply text-display-medium-emphasized;
+    @apply text-display-small-emphasized;
     margin-bottom: 1.5rem;
   }
 
@@ -31,10 +31,7 @@
     margin-bottom: 0.5rem;
   }
 
-  .markdown
-    :where(h1 + *, h2 + *, h3 + *, h4 + *):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(h1 + *, h2 + *, h3 + *, h4 + *):not( :where(.not-markdown, .not-markdown *)) {
     margin-top: 0;
   }
 
@@ -78,17 +75,11 @@
     margin: 2rem 0;
   }
 
-  .markdown
-    :where(blockquote > :first-child):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(blockquote > :first-child):not( :where(.not-markdown, .not-markdown *)) {
     margin-top: 0;
   }
 
-  .markdown
-    :where(blockquote > :last-child):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(blockquote > :last-child):not( :where(.not-markdown, .not-markdown *)) {
     margin-bottom: 0;
   }
 
@@ -100,10 +91,7 @@
     margin: 1rem 0;
   }
 
-  .markdown
-    :where(ul ul, ul ol, ol ol, ol ul):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(ul ul, ul ol, ol ol, ol ul):not( :where(.not-markdown, .not-markdown *)) {
     margin: 0;
   }
 
@@ -115,10 +103,7 @@
     list-style-type: lower-roman;
   }
 
-  .markdown
-    :where(ul ul ol, ul ol ol, ol ul ol, ol ol ol):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(ul ul ol, ul ol ol, ol ul ol, ol ol ol):not( :where(.not-markdown, .not-markdown *)) {
     list-style-type: lower-alpha;
   }
 
@@ -137,20 +122,15 @@
   /*============================================================================
 =                            Markdown Task Lists                             =
 ============================================================================*/
-  .markdown
-  :where(.contains-task-list):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(.contains-task-list):not(:where(.not-markdown, .not-markdown *)) {
     list-style-type: none;
   }
 
-  .markdown
-    :where(.task-list-item):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(.task-list-item):not(:where(.not-markdown, .not-markdown *)) {
     position: relative;
   }
 
-  .markdown
-    :where(.task-list-item > input[type="checkbox"]:disabled):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.task-list-item > input[type="checkbox"]:disabled):not( :where(.not-markdown, .not-markdown *)) {
     appearance: none;
     width: 1rem;
     height: 1rem;
@@ -165,10 +145,7 @@
     background-size: 75%;
   }
 
-  .markdown
-    :where(.task-list-item > input[type="checkbox"]:disabled:checked):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.task-list-item > input[type="checkbox"]:disabled:checked):not( :where(.not-markdown, .not-markdown *)) {
     @apply border-success;
     @apply bg-success;
     background-image: url('data:image/svg+xml,<svg version="1.1" baseProfile="tiny" id="Layer_1" width="800px" height="800px" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 38.525 7.876 L 36.127 5.946 C 34.945 4.996 34.258 5.007 33.246 6.257 L 15.817 27.766 L 7.706 21.027 C 6.587 20.087 5.887 20.137 4.967 21.287 L 3.116 23.697 C 2.177 24.879 2.297 25.55 3.407 26.477 L 14.967 36.039 C 16.157 37.039 16.827 36.936 17.747 35.817 L 38.826 10.756 C 39.816 9.566 39.756 8.855 38.525 7.876 Z" style="fill: rgb(255, 255, 255);"></path></svg>');
@@ -177,10 +154,7 @@
   /*============================================================================
 =                               Markdown Links                               =
 ============================================================================*/
-  .markdown
-  :where(a):not(:where(h1, h2, h3, h4, h5, h6) a):not(
-    :where(.not-markdown, .not-markdown *)
-  ) {
+  .markdown :where(a):not(:where(h1, h2, h3, h4, h5, h6) a):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-info;
     text-decoration-line: underline;
     text-underline-offset: 0.3rem;
@@ -188,17 +162,11 @@
     text-decoration-skip-ink: auto;
   }
 
-  .markdown
-    :where(a:visited):not(:where(h1, h2, h3, h4, h5, h6) a):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(a:visited):not(:where(h1, h2, h3, h4, h5, h6) a):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-success;
   }
 
-  .markdown
-    :where(a:hover, a:focus, a:active):not(
-      :where(h1, h2, h3, h4, h5, h6) a
-    ):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(a:hover, a:focus, a:active):not( :where(h1, h2, h3, h4, h5, h6) a):not(:where(.not-markdown, .not-markdown *)) {
     @apply text-info;
     text-decoration-thickness: 2px;
   }
@@ -216,10 +184,7 @@
 =                               Markdown Code                                =
 ============================================================================*/
   /* Inline Code */
-  .markdown
-  :where(code):not(:where(pre code)):not(
-    :where(.not-markdown, .not-markdown *)
-  ) {
+  .markdown :where(code):not(:where(pre code)):not( :where(.not-markdown, .not-markdown *)) {
     @apply font-mono;
     @apply text-body-medium;
     @apply bg-surface-variant;
@@ -271,8 +236,7 @@
     font-weight: 700;
   }
 
-  .markdown
-    :where(table th, table td):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(table th, table td):not(:where(.not-markdown, .not-markdown *)) {
     border: 1px solid;
     @apply border-outline;
     padding: 16px;
@@ -299,32 +263,22 @@
   /*============================================================================
 =                        Markdown Github-style Alerts                        =
 ============================================================================*/
-  .markdown
-  :where(.markdown-alert):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(.markdown-alert):not(:where(.not-markdown, .not-markdown *)) {
     border-left: 3px solid;
     @apply border-outline-variant;
     padding: 1.5rem;
     margin: 2rem 0;
   }
 
-  .markdown
-    :where(.markdown-alert > :first-child):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert > :first-child):not( :where(.not-markdown, .not-markdown *)) {
     margin-top: 0;
   }
 
-  .markdown
-    :where(.markdown-alert > :last-child):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert > :last-child):not( :where(.not-markdown, .not-markdown *)) {
     margin-bottom: 0;
   }
 
-  .markdown
-    :where(.markdown-alert .octicon):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert .octicon):not( :where(.not-markdown, .not-markdown *)) {
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -333,87 +287,54 @@
     margin-right: 0.5rem;
   }
 
-  .markdown
-    :where(.markdown-alert .markdown-alert-title):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert .markdown-alert-title):not( :where(.not-markdown, .not-markdown *)) {
     display: flex;
     align-items: center;
     @apply text-title-medium-emphasized;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-note):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-note):not( :where(.not-markdown, .not-markdown *)) {
     @apply border-l-info;
     @apply bg-info-container;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-note .markdown-alert-title):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-note .markdown-alert-title):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-info;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-tip):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-tip):not( :where(.not-markdown, .not-markdown *)) {
     @apply border-l-success;
     @apply bg-success-container;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-tip .markdown-alert-title):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-tip .markdown-alert-title):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-success;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-important):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-important):not( :where(.not-markdown, .not-markdown *)) {
     @apply border-l-important;
     @apply bg-important-container;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-important .markdown-alert-title):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-important .markdown-alert-title):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-important;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-warning):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-warning):not( :where(.not-markdown, .not-markdown *)) {
     @apply border-l-warning;
     @apply bg-warning-container;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-warning .markdown-alert-title):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-warning .markdown-alert-title):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-warning;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-caution):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-caution):not( :where(.not-markdown, .not-markdown *)) {
     @apply border-l-error;
     @apply bg-error-container;
   }
 
-  .markdown
-    :where(.markdown-alert.markdown-alert-caution .markdown-alert-title):not(
-      :where(.not-markdown, .not-markdown *)
-    ) {
+  .markdown :where(.markdown-alert.markdown-alert-caution .markdown-alert-title):not( :where(.not-markdown, .not-markdown *)) {
     @apply text-error;
   }
 
@@ -428,8 +349,7 @@
     margin-bottom: 1rem;
   }
 
-  .markdown
-    :where(details summary):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(details summary):not(:where(.not-markdown, .not-markdown *)) {
     cursor: pointer;
     font-weight: 700;
     padding: 0.5rem;
@@ -440,8 +360,7 @@
     padding: 0.5rem;
   }
 
-  .markdown
-    :where(details[open] summary):not(:where(.not-markdown, .not-markdown *)) {
+  .markdown :where(details[open] summary):not(:where(.not-markdown, .not-markdown *)) {
     border-bottom: 1px solid;
     @apply border-outline;
     margin-bottom: 0.5rem;
