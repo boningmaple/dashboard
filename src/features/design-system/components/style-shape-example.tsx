@@ -6,29 +6,23 @@ export default function ShapeExample() {
         <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-none">
           none
         </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-extra-small">
-          extra-small
+        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-xs">
+          xs
         </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-small">
-          small
+        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-sm">
+          sm
         </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-medium">
-          medium
+        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-md">
+          md
         </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-large">
-          large
+        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-lg">
+          lg
         </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-large-increased">
-          large-increased
+        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-xl">
+          xl
         </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-extra-large">
-          extra-large
-        </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-extra-large-increased">
-          extra-large-increased
-        </div>
-        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-extra-extra-large">
-          extra-extra-large
+        <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-2xl">
+          2xl
         </div>
         <div className="text-label-large w-32 aspect-video p-2 flex flex-col-reverse bg-on-surface text-surface rounded-tr-full">
           full

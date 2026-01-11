@@ -4,19 +4,12 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 
 export const BUTTON_VARIANTS = {
-  default:
-    "bg-on-surface text-surface hover:bg-on-surface/85 active:bg-on-surface/70",
-  primary:
-    "bg-primary text-on-primary hover:bg-primary/85 active:bg-primary/70",
-  outlined:
-    "text-on-surface-variant border border-outline-variant hover:bg-surface-variant/25 active:bg-surface-variant/50",
-  text: "text-on-surface hover:bg-surface-variant/25 active:bg-surface-variant/50",
-  link: "text-on-surface underline-offset-4 hover:underline active:underline active:decoration-2",
-  error: "bg-error text-on-error hover:bg-error/80 active:bg-error/75",
-  success:
-    "bg-success text-on-success hover:bg-success/80 active:bg-success/75",
-  warning:
-    "bg-warning text-on-warning hover:bg-warning/80 active:bg-warning/75",
+  default: "bg-on-surface text-surface",
+  elevated: "bg-surface-container-low text-primary shadow-1",
+  filled: "bg-primary text-on-primary",
+  tonal: "bg-secondary-container text-on-secondary-container",
+  outlined: "text-on-surface-variant border border-outline-variant",
+  text: "text-on-surface",
 } as const;
 
 export const BUTTON_SIZES = {
@@ -31,11 +24,10 @@ export const BUTTON_SIZES = {
 const buttonVariants = cva(
   `
   shrink-0 inline-flex items-center justify-center gap-2 whitespace-nowrap
-  text-label-large font-medium rounded-full outline-none transition-all
-  disabled:bg-on-surface/10 disabled:text-on-surface/38 disabled:pointer-events-none
-  focus-visible:ring-3 focus-visible:ring-outline/50 aria-invalid:ring-error/50
-  active:rounded-small
-  [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-5 [&_svg]:shrink-0
+  text-label-large font-medium rounded-md outline-none 
+  state-layer disabled:state-disabled hover:state-hovered
+  focus-visible:state-focused active:state-pressed aria-invalid:outline-error/50
+  [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0
   `,
   {
     variants: {

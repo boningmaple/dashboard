@@ -1,0 +1,65 @@
+@property --state-layer-opacity {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@utility state-layer {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: var(--state-layer-opacity);
+    transition: opacity 15ms linear;
+  }
+}
+
+@utility state-disabled {
+  @apply bg-on-surface/10 text-on-surface/38 pointer-events-none;
+}
+
+@utility state-hovered {
+  --state-layer-opacity: 0.08;
+}
+
+@utility state-focused {
+  --state-layer-opacity: 0.12;
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  animation:
+    outward-grow calc(600ms * 0.25) cubic-bezier(0.2, 0, 0, 1),
+    outward-shrink calc(600ms * 0.75) cubic-bezier(0.2, 0, 0, 1)
+    calc(600ms * 0.25);
+}
+
+@utility state-pressed {
+  --state-layer-opacity: 0.12;
+}
+
+@utility state-dragged {
+  --state-layer-opacity: 0.16;
+}
+
+@keyframes outward-grow {
+  0% {
+    outline-width: 0;
+  }
+  100% {
+    outline-width: 8px;
+  }
+}
+
+@keyframes outward-shrink {
+  0% {
+    outline-width: 8px;
+  }
+  100% {
+    outline-width: 3px;
+  }
+}
