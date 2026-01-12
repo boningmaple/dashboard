@@ -3,10 +3,16 @@ import {
   ArrowRightIcon,
   PanelLeftCloseIcon,
 } from "lucide-react";
-import { BUTTON_SIZES, BUTTON_VARIANTS, Button } from "@/components/ui/button";
+import {
+  BUTTON_SIZES,
+  BUTTON_TOGGLE,
+  BUTTON_VARIANTS,
+  Button,
+} from "@/components/ui/button";
 
 type ButtonVariant = keyof typeof BUTTON_VARIANTS;
 type ButtonSize = keyof typeof BUTTON_SIZES;
+type ButtonToggle = keyof typeof BUTTON_TOGGLE;
 const BUTTON_STATES = [
   "enabled",
   "disabled",
@@ -50,17 +56,25 @@ export default function ButtonExample() {
         {Object.keys(BUTTON_VARIANTS).map((variant) => (
           <div key={variant} className="first:[&>h3]:mt-0">
             <h3>{variant}</h3>
-            <div className="flex gap-4 flex-wrap">
-              {BUTTON_STATES.map((state) => (
-                <Button
-                  key={state}
-                  variant={variant as ButtonVariant}
-                  className={BUTTON_STATE_CLASSES[state as ButtonState]}
-                  {...getDataState(state)}
-                >
-                  {state}
-                </Button>
-              ))}
+            <div className="flex flex-col gap-4">
+              {Object.keys(BUTTON_TOGGLE).map((toggle) => {
+                if (variant === "text" && toggle !== "default") return null;
+                return (
+                  <div key={toggle} className="flex gap-4 flex-wrap">
+                    {BUTTON_STATES.map((state) => (
+                      <Button
+                        key={state}
+                        variant={variant as ButtonVariant}
+                        toggle={toggle as ButtonToggle}
+                        className={BUTTON_STATE_CLASSES[state as ButtonState]}
+                        {...getDataState(state)}
+                      >
+                        {state}
+                      </Button>
+                    ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}
