@@ -2,6 +2,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
 import { cn } from "@/lib/utils";
+import Ripple from "@/styles/ripple";
 
 export const BUTTON_VARIANTS = {
   default: "bg-on-surface text-surface",
@@ -27,12 +28,12 @@ export const BUTTON_TOGGLE = {
   selected: "rounded-md",
 } as const;
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   `
   shrink-0 inline-flex items-center justify-center gap-2 whitespace-nowrap
-  text-label-large font-medium rounded-full outline-none 
+  text-label-large font-medium rounded-full outline-none
   state-layer disabled:state-disabled hover:state-hovered
-  focus-visible:state-focused active:state-pressed aria-invalid:outline-error/50
+  focus-visible:state-focused aria-invalid:outline-error/50
   [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0
   `,
   {
@@ -76,7 +77,7 @@ const buttonVariants = cva(
   },
 );
 
-function Button({
+export function Button({
   className,
   variant = "default",
   size = "sm",
@@ -87,17 +88,30 @@ function Button({
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
   }) {
-  const Comp = asChild ? Slot : "button";
+  if (asChild) {
+    return (
+      <Slot
+        data-slot="button"
+        data-variant={variant}
+        data-size={size}
+        data-toggle={toggle}
+        className={cn(buttonVariants({ variant, size, toggle, className }))}
+        {...props}
+      />
+    );
+  }
 
   return (
-    <Comp
+    <button
       data-slot="button"
       data-variant={variant}
       data-size={size}
+      data-toggle={toggle}
       className={cn(buttonVariants({ variant, size, toggle, className }))}
       {...props}
-    />
+    >
+      {props.children}
+      <Ripple />
+    </button>
   );
 }
-
-export { Button, buttonVariants };

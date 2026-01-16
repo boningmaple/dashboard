@@ -8,13 +8,14 @@
   position: relative;
   overflow: hidden;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: currentColor;
     border-radius: inherit;
     pointer-events: none;
+
+    background-color: currentColor;
     opacity: var(--state-layer-opacity);
     transition: opacity 15ms linear;
   }

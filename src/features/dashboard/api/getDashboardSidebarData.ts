@@ -53,6 +53,10 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   url: "/design-system/style-motion",
                 },
                 {
+                  title: "Ripple",
+                  url: "/design-system/style-ripple",
+                },
+                {
                   title: "Components",
                   items: [
                     {
