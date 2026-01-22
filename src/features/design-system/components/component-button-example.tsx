@@ -28,7 +28,7 @@ const BUTTON_STATE_CLASSES: Record<ButtonState, string> = {
   hovered: "data-hovered:state-hovered",
   focused: "data-focused:state-focused",
   pressed: "data-pressed:state-pressed",
-  invalid: "data-focused:state-focused data-focused:outline-error/50",
+  invalid: "data-focused:state-focused data-focused:outline-error",
 };
 
 function getDataState(state: ButtonState) {
@@ -119,6 +119,14 @@ export default function ButtonExample() {
             </Button>
           );
         })}
+      </div>
+      <h2>Color</h2>
+      <div className="flex gap-4 flex-wrap items-center">
+        <Button className="bg-primary text-on-primary">primary</Button>
+        <Button className="bg-info text-on-info">info</Button>
+        <Button className="bg-success text-on-success">success</Button>
+        <Button className="bg-warning text-on-warning">warning</Button>
+        <Button className="bg-error text-on-error">error</Button>
       </div>
       <h2>Others</h2>
       <div className="flex gap-6 items-center flex-wrap">

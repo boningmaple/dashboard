@@ -60,6 +60,10 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Components",
                   items: [
                     {
+                      title: "Alert",
+                      url: "/design-system/component-alert",
+                    },
+                    {
                       title: "Avatar",
                       url: "/design-system/component-avatar",
                     },

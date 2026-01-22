@@ -34,8 +34,7 @@ export default function AvatarExample() {
           </Avatar>
           <Badge
             size="sm"
-            variant="success"
-            className="absolute -top-0.5 -right-0.5"
+            className="bg-success absolute -top-0.5 -right-0.5"
           />
         </div>
         {/* Count badge */}
@@ -46,8 +45,7 @@ export default function AvatarExample() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Badge
-              variant="error"
-              className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"
+              className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"
             >
               {count}
             </Badge>
@@ -64,8 +62,7 @@ export default function AvatarExample() {
           </Avatar>
           <Badge
             size="sm"
-            variant="success"
-            className="absolute -bottom-0.5 -right-0.5 ring-2 ring-surface"
+            className="bg-success absolute -bottom-0.5 -right-0.5 ring-2 ring-surface"
           />
         </div>
         {/* Count badge */}
@@ -76,8 +73,7 @@ export default function AvatarExample() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Badge
-              variant="error"
-              className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface"
+              className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface"
             >
               {count}
             </Badge>

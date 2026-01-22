@@ -12,12 +12,12 @@ const alertColors = [
   ["info-container", "on-info-container"],
   ["success", "on-success"],
   ["success-container", "on-success-container"],
-  ["important", "on-important"],
-  ["important-container", "on-important-container"],
   ["warning", "on-warning"],
   ["warning-container", "on-warning-container"],
   ["error", "on-error"],
   ["error-container", "on-error-container"],
+  ["important", "on-important"],
+  ["important-container", "on-important-container"],
 ];
 
 const surfaceColors = [

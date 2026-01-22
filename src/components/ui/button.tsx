@@ -5,9 +5,8 @@ import { cn } from "@/lib/utils";
 import Ripple from "@/styles/ripple";
 
 export const BUTTON_VARIANTS = {
-  default: "bg-on-surface text-surface",
-  elevated: "bg-surface-container-low text-primary shadow-1",
-  filled: "bg-primary text-on-primary",
+  filled: "bg-on-surface text-surface",
+  elevated: "bg-surface-container-lowest text-on-surface shadow-1",
   tonal: "bg-secondary-container text-on-secondary-container",
   outlined: "text-on-surface-variant border border-outline-variant",
   text: "text-on-surface",
@@ -30,10 +29,10 @@ export const BUTTON_TOGGLE = {
 
 export const buttonVariants = cva(
   `
-  shrink-0 inline-flex items-center justify-center gap-2 whitespace-nowrap
-  text-label-large font-medium rounded-full outline-none
+  shrink-0 text-label-large font-medium rounded-full outline-none
+  inline-flex items-center justify-center gap-2 whitespace-nowrap
   state-layer disabled:state-disabled hover:state-hovered
-  focus-visible:state-focused aria-invalid:outline-error/50
+  focus-visible:state-focused aria-invalid:outline-error
   [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0
   `,
   {
@@ -44,19 +43,14 @@ export const buttonVariants = cva(
     },
     compoundVariants: [
       {
-        variant: "default",
+        variant: "filled",
         toggle: "unselected",
         className: "bg-surface-container text-on-surface-variant",
       },
       {
         variant: "elevated",
         toggle: "selected",
-        className: "bg-primary text-on-primary",
-      },
-      {
-        variant: "filled",
-        toggle: "unselected",
-        className: "bg-surface-container text-on-surface-variant",
+        className: "bg-inverse-surface text-inverse-on-surface",
       },
       {
         variant: "tonal",
@@ -70,7 +64,7 @@ export const buttonVariants = cva(
       },
     ],
     defaultVariants: {
-      variant: "default",
+      variant: "filled",
       size: "sm",
       toggle: "default",
     },
@@ -79,7 +73,7 @@ export const buttonVariants = cva(
 
 export function Button({
   className,
-  variant = "default",
+  variant = "filled",
   size = "sm",
   toggle = "default",
   asChild = false,

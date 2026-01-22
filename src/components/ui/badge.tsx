@@ -4,15 +4,11 @@ import { cn } from "@/lib/utils";
 
 export const BADGE_VARIANTS = {
   default: "bg-on-surface text-surface",
-  primary: "bg-primary text-on-primary",
-  error: "bg-error text-on-error",
-  success: "bg-success text-on-success",
-  warning: "bg-warning text-on-warning",
 };
 
 export const BADGE_SIZES = {
-  sm: "w-2 h-2",
-  default: "w-fit h-fit min-w-4 min-h-4 px-1",
+  sm: "size-2",
+  default: "w-fit min-w-4 min-h-4 px-1",
 } as const;
 
 const badgeVariants = cva(
