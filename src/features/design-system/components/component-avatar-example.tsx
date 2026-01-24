@@ -8,19 +8,19 @@ export default function AvatarExample() {
       <h2>Sizes</h2>
       <div className="flex items-center gap-4">
         <Avatar className="size-6">
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar className="size-10">
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar className="size-12">
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
@@ -29,7 +29,7 @@ export default function AvatarExample() {
         {/* Dot badge */}
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Badge
@@ -41,7 +41,7 @@ export default function AvatarExample() {
         {["4", "32", "999+"].map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Badge
@@ -57,7 +57,7 @@ export default function AvatarExample() {
         {/* Dot badge */}
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Badge
@@ -69,7 +69,7 @@ export default function AvatarExample() {
         {["4", "32", "999+"].map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Badge
@@ -84,7 +84,7 @@ export default function AvatarExample() {
       <div className="flex -space-x-2 items-center">
         {Array.from({ length: 4 }).map((_, i) => (
           <Avatar key={i} className="size-8 ring-2 ring-surface">
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         ))}
@@ -93,7 +93,7 @@ export default function AvatarExample() {
       <div className="flex -space-x-2 items-center">
         {Array.from({ length: 3 }).map((_, i) => (
           <Avatar key={i} className="size-8 ring-2 ring-surface">
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         ))}

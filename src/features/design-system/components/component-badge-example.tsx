@@ -114,7 +114,7 @@ export default function BadgeExample() {
       <div className="flex items-center gap-6">
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Badge
@@ -125,7 +125,7 @@ export default function BadgeExample() {
         {BADGE_COUNTS.map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2">
@@ -138,7 +138,7 @@ export default function BadgeExample() {
       <div className="flex items-center gap-6">
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Badge
@@ -149,7 +149,7 @@ export default function BadgeExample() {
         {BADGE_COUNTS.map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface">

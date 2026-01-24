@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export const ALERT_VARIANTS = {
   filled: "bg-on-surface text-surface",
-  outlined: "text-on-surface-variant border border-outline-variant",
+  outlined: "bg-surface text-on-surface border border-outline-variant",
 } as const;
 
 const alertVariants = cva(
