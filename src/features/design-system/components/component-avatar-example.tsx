@@ -1,52 +1,51 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: This is a example */
+import { BadgeCheckIcon, CircleCheckIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
 export default function AvatarExample() {
   return (
     <>
-      <h2>Sizes</h2>
-      <div className="flex items-center gap-4">
-        <Avatar className="size-6">
-          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        <Avatar>
-          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        <Avatar className="size-10">
-          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        <Avatar className="size-12">
-          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-      </div>
+      <Avatar>
+        <AvatarImage
+          src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+          alt="Jack"
+        />
+        <AvatarFallback>J</AvatarFallback>
+      </Avatar>
       <h2>With Badge</h2>
       <div className="flex items-center gap-6">
-        {/* Dot badge */}
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
           </Avatar>
-          <Badge
-            size="sm"
-            className="bg-success absolute -top-0.5 -right-0.5"
-          />
+          <Badge size="sm" className="bg-success absolute bottom-0 right-0" />
         </div>
-        {/* Count badge */}
+        <div className="relative">
+          <Avatar>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge size="icon" className="absolute -top-1.5 -right-1.5">
+            <BadgeCheckIcon className="fill-sky-500" />
+          </Badge>
+        </div>
         {["4", "32", "999+"].map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+                alt="Jack"
+              />
+              <AvatarFallback>J</AvatarFallback>
             </Avatar>
-            <Badge
-              className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"
-            >
+            <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2">
               {count}
             </Badge>
           </div>
@@ -54,53 +53,204 @@ export default function AvatarExample() {
       </div>
       <h2>With Outline Ring around Badge</h2>
       <div className="flex items-center gap-6">
-        {/* Dot badge */}
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
           </Avatar>
           <Badge
             size="sm"
-            className="bg-success absolute -bottom-0.5 -right-0.5 ring-2 ring-surface"
+            className="bg-success absolute bottom-0 right-0 ring-2 ring-surface"
           />
         </div>
-        {/* Count badge */}
+        <div className="relative">
+          <Avatar>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge
+            size="icon"
+            className="bg-surface absolute -top-1.5 -right-1.5"
+          >
+            <BadgeCheckIcon className="fill-sky-500" />
+          </Badge>
+        </div>
         {["4", "32", "999+"].map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+                alt="Jack"
+              />
+              <AvatarFallback>J</AvatarFallback>
             </Avatar>
-            <Badge
-              className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface"
-            >
+            <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface">
               {count}
             </Badge>
           </div>
         ))}
       </div>
+      <h2>With Outline and Badge</h2>
+      <div className="flex flex-wrap gap-6">
+        <div className="relative w-fit">
+          <Avatar className="outline-2 outline-error outline-offset-2">
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+        </div>
+        <div className="relative w-fit">
+          <Avatar className="outline-2 outline-success outline-offset-2">
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge
+            size="icon"
+            className="bg-surface absolute -bottom-1.5 -right-1.5"
+          >
+            <CircleCheckIcon className="fill-success" />
+          </Badge>
+        </div>
+      </div>
       <h2>Group</h2>
       <div className="flex -space-x-2 items-center">
-        {Array.from({ length: 4 }).map((_, i) => (
-          <Avatar key={i} className="size-8 ring-2 ring-surface">
-            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        ))}
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+            alt="Jack"
+          />
+          <AvatarFallback>J</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Chase&backgroundColor=ffffff"
+            alt="Chase"
+          />
+          <AvatarFallback>C</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Ryker&backgroundColor=ffffff"
+            alt="Ryker"
+          />
+          <AvatarFallback>R</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Katherine&backgroundColor=ffffff"
+            alt="Katherine"
+          />
+          <AvatarFallback>K</AvatarFallback>
+        </Avatar>
+      </div>
+      <h2>Group with Left Avatar on the Top</h2>
+      <div className="flex -space-x-2 items-center">
+        <Avatar className="ring-2 ring-surface z-30">
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" />
+          <AvatarFallback>J</AvatarFallback>
+        </Avatar>
+
+        <Avatar className="ring-2 ring-surface z-20">
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Chase&backgroundColor=ffffff" />
+          <AvatarFallback>C</AvatarFallback>
+        </Avatar>
+
+        <Avatar className="ring-2 ring-surface z-10">
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Ryker&backgroundColor=ffffff" />
+          <AvatarFallback>R</AvatarFallback>
+        </Avatar>
+
+        <Avatar className="ring-2 ring-surface z-0">
+          <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Katherine&backgroundColor=ffffff" />
+          <AvatarFallback>K</AvatarFallback>
+        </Avatar>
       </div>
       <h2>Group with Count</h2>
       <div className="flex -space-x-2 items-center">
-        {Array.from({ length: 3 }).map((_, i) => (
-          <Avatar key={i} className="size-8 ring-2 ring-surface">
-            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        ))}
-        <div className="relative">
-          <Avatar className="size-8 ring-2 ring-surface">
-            <AvatarFallback>+9</AvatarFallback>
-          </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+            alt="Jack"
+          />
+          <AvatarFallback>J</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Chase&backgroundColor=ffffff"
+            alt="Chase"
+          />
+          <AvatarFallback>C</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Ryker&backgroundColor=ffffff"
+            alt="Ryker"
+          />
+          <AvatarFallback>R</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarImage
+            src="https://api.dicebear.com/9.x/lorelei/svg?seed=Katherine&backgroundColor=ffffff"
+            alt="Katherine"
+          />
+          <AvatarFallback>K</AvatarFallback>
+        </Avatar>
+        <Avatar className="ring-2 ring-surface">
+          <AvatarFallback>+9</AvatarFallback>
+        </Avatar>
+      </div>
+      <h2>Misc</h2>
+      <div className="not-markdown flex flex-col gap-6">
+        <div className="flex flex-wrap items-center justify-center rounded-full border border-outline px-2 py-1.5 w-fit">
+          <div className="flex -space-x-2">
+            <Avatar className="ring-2 ring-surface size-6">
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+                alt="Jack"
+              />
+              <AvatarFallback>J</AvatarFallback>
+            </Avatar>
+            <Avatar className="ring-2 ring-surface size-6">
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Chase&backgroundColor=ffffff"
+                alt="Chase"
+              />
+              <AvatarFallback>C</AvatarFallback>
+            </Avatar>
+            <Avatar className="ring-2 ring-surface size-6">
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Ryker&backgroundColor=ffffff"
+                alt="Ryker"
+              />
+              <AvatarFallback>R</AvatarFallback>
+            </Avatar>
+            <Avatar className="ring-2 ring-surface size-6">
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Katherine&backgroundColor=ffffff"
+                alt="Katherine"
+              />
+              <AvatarFallback>K</AvatarFallback>
+            </Avatar>
+            <Avatar className="ring-2 ring-surface size-6">
+              <AvatarFallback>+9</AvatarFallback>
+            </Avatar>
+          </div>
+          <p className="text-label-medium text-on-surface-variant px-2">
+            Loved by{" "}
+            <strong className="text-on-surface font-bold">10K+</strong>{" "}
+            developers.
+          </p>
         </div>
       </div>
     </>

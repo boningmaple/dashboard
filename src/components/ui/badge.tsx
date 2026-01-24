@@ -9,6 +9,7 @@ export const BADGE_VARIANTS = {
 export const BADGE_SIZES = {
   sm: "size-2",
   default: "w-fit min-w-4 min-h-4 px-1",
+  icon: "size-4 [&_svg:not([class*='size-'])]:size-4 bg-transparent"
 } as const;
 
 const badgeVariants = cva(
