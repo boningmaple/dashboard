@@ -5,7 +5,9 @@
 }
 
 @utility state-layer {
-  position: relative;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
   overflow: hidden;
 
   &::before {
@@ -25,18 +27,17 @@
   @apply bg-on-surface/10 text-on-surface/38 pointer-events-none;
 }
 
-@utility state-hovered {
-  --state-layer-opacity: 0.08;
-}
-
 @utility state-focused {
-  --state-layer-opacity: 0.12;
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
   animation:
     outward-grow calc(600ms * 0.25) cubic-bezier(0.2, 0, 0, 1),
     outward-shrink calc(600ms * 0.75) cubic-bezier(0.2, 0, 0, 1)
     calc(600ms * 0.25);
+}
+
+@utility state-hovered {
+  --state-layer-opacity: 0.08;
 }
 
 @utility state-pressed {

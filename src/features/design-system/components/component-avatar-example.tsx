@@ -1,6 +1,7 @@
 import { BadgeCheckIcon, CircleCheckIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export default function AvatarExample() {
   return (
@@ -98,7 +99,7 @@ export default function AvatarExample() {
       </div>
       <h2>With Outline and Badge</h2>
       <div className="flex flex-wrap gap-6">
-        <div className="relative w-fit">
+        <div className="relative">
           <Avatar className="outline-2 outline-error outline-offset-2">
             <AvatarImage
               src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
@@ -106,8 +107,11 @@ export default function AvatarExample() {
             />
             <AvatarFallback>J</AvatarFallback>
           </Avatar>
+          <Badge className="bg-error text-on-error absolute top-1/1 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            Live
+          </Badge>
         </div>
-        <div className="relative w-fit">
+        <div className="relative">
           <Avatar className="outline-2 outline-success outline-offset-2">
             <AvatarImage
               src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
@@ -122,6 +126,92 @@ export default function AvatarExample() {
             <CircleCheckIcon className="fill-success" />
           </Badge>
         </div>
+      </div>
+      <h2>Avatar Button</h2>
+      <div className="flex flex-wrap gap-6">
+        <Button variant="text" size="icon" className="text-neutral-900">
+          <Avatar>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+        </Button>
+        <Button variant="text" size="icon" className="text-neutral-900">
+          <Avatar>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge
+            size="sm"
+            className="bg-success absolute bottom-0 right-0 ring-2 ring-surface"
+          />
+        </Button>
+        <Button variant="text" size="icon" className="text-neutral-900">
+          <Avatar>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge
+            size="icon"
+            className="bg-surface absolute -top-1.5 -right-1.5"
+          >
+            <BadgeCheckIcon className="fill-sky-500" />
+          </Badge>
+        </Button>
+        {["4", "32", "999+"].map((count) => (
+          <Button
+            variant="text"
+            key={count}
+            size="icon"
+            className="text-neutral-900"
+          >
+            <Avatar>
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+                alt="Jack"
+              />
+              <AvatarFallback>J</AvatarFallback>
+            </Avatar>
+            <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface">
+              {count}
+            </Badge>
+          </Button>
+        ))}
+        <Button variant="text" size="icon" className="text-neutral-900">
+          <Avatar className="outline-2 outline-error outline-offset-2">
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge className="bg-error text-on-error absolute top-1/1 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            Live
+          </Badge>
+        </Button>
+        <Button variant="text" size="icon" className="text-neutral-900">
+          <Avatar className="outline-2 outline-success outline-offset-2">
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="Jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
+          </Avatar>
+          <Badge
+            size="icon"
+            className="bg-surface absolute -bottom-1.5 -right-1.5"
+          >
+            <CircleCheckIcon className="fill-success" />
+          </Badge>
+        </Button>
       </div>
       <h2>Group</h2>
       <div className="flex -space-x-2 items-center">
@@ -247,8 +337,7 @@ export default function AvatarExample() {
             </Avatar>
           </div>
           <p className="text-label-medium text-on-surface-variant px-2">
-            Loved by{" "}
-            <strong className="text-on-surface font-bold">10K+</strong>{" "}
+            Loved by <strong className="text-on-surface font-bold">10K+</strong>{" "}
             developers.
           </p>
         </div>

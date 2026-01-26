@@ -45,8 +45,8 @@ export default function Ripple({
 
   return (
     <span
-      aria-hidden="true"
       ref={rippleRef}
+      aria-hidden="true"
       className={cn(
         "absolute inset-0 pointer-events-none opacity-0 bg-current",
         className,

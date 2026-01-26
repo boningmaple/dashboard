@@ -3,8 +3,7 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 
 const CARD_VARIANTS = {
-  outlined:
-    "bg-surface text-on-surface border border-outline-variant",
+  outlined: "bg-surface text-on-surface border border-outline-variant",
   elevated: "bg-surface-container-lowest text-on-surface shadow-1",
   filled: "bg-surface-container-highest text-on-surface",
 };

@@ -4,13 +4,13 @@ import {
   OctagonAlertIcon,
   TriangleAlertIcon,
 } from "lucide-react";
+import { Fragment } from "react/jsx-runtime";
 import {
   ALERT_VARIANTS,
   Alert,
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert";
-import { Fragment } from "react/jsx-runtime";
 
 type AlertVariant = keyof typeof ALERT_VARIANTS;
 

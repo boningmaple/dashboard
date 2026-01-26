@@ -111,22 +111,25 @@ export default function BadgeExample() {
         </Badge>
       </div>
       <h2>On Avatar</h2>
-      <div className="flex items-center gap-6">
+      <div className="flex flex-wrap items-center gap-6">
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
           </Avatar>
-          <Badge
-            size="sm"
-            className="bg-success absolute -bottom-0.5 -right-0.5"
-          />
+          <Badge size="sm" className="bg-success absolute bottom-0 right-0" />
         </div>
         {BADGE_COUNTS.map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+                alt="jack"
+              />
+              <AvatarFallback>J</AvatarFallback>
             </Avatar>
             <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2">
               {count}
@@ -138,19 +141,25 @@ export default function BadgeExample() {
       <div className="flex items-center gap-6">
         <div className="relative">
           <Avatar>
-            <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage
+              src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+              alt="jack"
+            />
+            <AvatarFallback>J</AvatarFallback>
           </Avatar>
           <Badge
             size="sm"
-            className="bg-success absolute -bottom-0.5 -right-0.5 ring-2 ring-surface"
+            className="bg-success absolute bottom-0 right-0 ring-2 ring-surface"
           />
         </div>
         {BADGE_COUNTS.map((count) => (
           <div key={count} className="relative">
             <Avatar>
-              <AvatarImage src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=Jack&backgroundColor=ffffff"
+                alt="jack"
+              />
+              <AvatarFallback>J</AvatarFallback>
             </Avatar>
             <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface">
               {count}
@@ -161,26 +170,27 @@ export default function BadgeExample() {
       <h2>On Icon Button</h2>
       <div className="flex items-center gap-6 mb-4">
         {BADGE_COUNTS.map((count) => (
-          <div key={count} className="relative">
-            <Button variant="text" size="icon-sm">
-              <BellIcon />
-            </Button>
-            <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/3 -translate-y-1/5 ring-2 ring-surface">
+          <Button key={count} variant="text" size="icon" className="relative">
+            <BellIcon />
+            <Badge className="bg-error text-on-error absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface">
               {count}
             </Badge>
-          </div>
+          </Button>
         ))}
       </div>
       <div className="flex items-center gap-6 mb-4">
         {BADGE_COUNTS.map((count) => (
-          <div key={count} className="relative">
-            <Button variant="elevated" size="icon-sm">
-              <ShoppingCartIcon />
-            </Button>
-            <Badge className="bg-success text-on-success absolute top-0 right-0 translate-x-1/3 -translate-y-1/5 ring-2 ring-surface">
+          <Button
+            key={count}
+            variant="outlined"
+            size="icon"
+            className="relative"
+          >
+            <ShoppingCartIcon />
+            <Badge className="bg-success text-on-success absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 ring-2 ring-surface">
               {count}
             </Badge>
-          </div>
+          </Button>
         ))}
       </div>
     </>

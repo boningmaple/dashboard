@@ -17,7 +17,7 @@ export default function DashboardSidebarTrigger({
     <Button
       data-sidebar="trigger"
       data-slot="sidebar-trigger"
-      size="icon-xs"
+      size="icon"
       variant="outlined"
       onClick={(event) => {
         onClick?.(event);
