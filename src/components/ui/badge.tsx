@@ -14,7 +14,7 @@ export const BADGE_SIZES = {
 
 const badgeVariants = cva(
   `shrink-0 inline-flex items-center justify-center gap-1 whitespace-nowrap
-  text-label-small font-medium rounded-full outline-none
+  text-label-small font-mono font-medium rounded-full outline-none
   [&>svg]:size-3 [&>svg]:pointer-events-none
   `,
   {
