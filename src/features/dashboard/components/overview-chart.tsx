@@ -29,13 +29,20 @@ export default function OverviewChart({ data }: { data: OverviewChartItem[] }) {
           tickFormatter={(value) => `$${value / 1000}k`}
         />
         <Tooltip
-          formatter={(value: number | undefined) =>
-            value != null ? `$${value.toLocaleString()}` : "-"
-          }
+          cursor={{ fill: "var(--color-surface-container-high)" }}
+          contentStyle={{
+            backgroundColor: "var(--color-surface)",
+            border: "1px solid var(--color-outline)",
+            borderRadius: "8px",
+            color: "var(--color-on-surface)",
+          }}
+          labelStyle={{
+            color: "var(--color-on-surface)",
+          }}
         />
         <Bar
           dataKey="revenue"
-          fill="hsl(var(--primary))"
+          fill="var(--color-on-surface)"
           radius={[4, 4, 0, 0]}
         />
       </BarChart>

@@ -213,9 +213,35 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                 {
                   title: "Recharts",
                   items: [
-                    { title: "Line Charts", url: "/blocks/charts/line-charts" },
-                    { title: "Bar Charts", url: "/blocks/charts/bar-charts" },
-                    { title: "Pie Charts", url: "/blocks/charts/pie-charts" },
+                    {
+                      title: "Line Charts",
+                      url: "/blocks/charts/recharts/line-charts",
+                    },
+                    {
+                      title: "Bar Charts",
+                      url: "/blocks/charts/recharts/bar-charts",
+                    },
+                    {
+                      title: "Pie Charts",
+                      url: "/blocks/charts/recharts/pie-charts",
+                    },
+                  ],
+                },
+                {
+                  title: "Echarts",
+                  items: [
+                    {
+                      title: "Line Charts",
+                      url: "/blocks/charts/echarts/line-charts",
+                    },
+                    {
+                      title: "Bar Charts",
+                      url: "/blocks/charts/echarts/bar-charts",
+                    },
+                    {
+                      title: "Pie Charts",
+                      url: "/blocks/charts/echarts/pie-charts",
+                    },
                   ],
                 },
               ],

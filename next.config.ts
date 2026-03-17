@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [new URL("https://picsum.photos/**")],
   },
+  transpilePackages: ["echarts", "zrender"],
 };
 
 const withMDX = createMDX({
