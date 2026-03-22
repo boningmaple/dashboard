@@ -1,9 +1,13 @@
-import BasicLineChart from "@/blocks/charts/echarts/line/basic-line-chart";
+import SimpleLineChart from "@/features/blocks/charts/recharts/line/simple-line-chart";
 
 export default function Page() {
   return (
     <main className="flex-1 flex flex-col gap-6 p-4 w-full max-w-7xl mx-auto">
-      <BasicLineChart />
+      <div className="markdown">
+        <h1>Line Charts</h1>
+        <h2>Simple Line Chart</h2>
+        <SimpleLineChart />
+      </div>
     </main>
   );
 }

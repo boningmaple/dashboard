@@ -1,6 +1,6 @@
 "use client";
 
-import ReactECharts from 'echarts-for-react';
+import ReactECharts from "echarts-for-react";
 import echarts from "@/lib/echarts";
 
 const option = {
