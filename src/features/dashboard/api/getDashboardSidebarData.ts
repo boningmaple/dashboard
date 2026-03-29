@@ -5,7 +5,7 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
 
   return {
     dashboardSidebarGroups: {
-      blogGroup: {
+      postsGroup: {
         menu: {
           items: [
             {
@@ -14,11 +14,11 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               items: [
                 {
                   title: "Less is More",
-                  url: "/blog/less-is-more",
+                  url: "/posts/less-is-more",
                 },
                 {
                   title: "Markdown",
-                  url: "/blog/markdown",
+                  url: "/posts/markdown",
                 },
               ],
             },
@@ -56,44 +56,47 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Ripple",
                   url: "/design-system/style-ripple",
                 },
-                {
-                  title: "Components",
-                  items: [
-                    {
-                      title: "Alert",
-                      url: "/design-system/component-alert",
-                    },
-                    {
-                      title: "Avatar",
-                      url: "/design-system/component-avatar",
-                    },
-                    {
-                      title: "Badge",
-                      url: "/design-system/component-badge",
-                    },
-                    {
-                      title: "Button",
-                      url: "/design-system/component-button",
-                    },
-                    {
-                      title: "Card",
-                      url: "/design-system/component-card",
-                    },
-                    {
-                      title: "Chip",
-                      url: "/design-system/component-chip",
-                    },
-                    {
-                      title: "Input",
-                      url: "/design-system/component-input",
-                    },
-                    {
-                      title: "Kbd",
-                      url: "/design-system/component-kbd",
-                    },
-                  ],
-                },
+
               ],
+            },
+          ],
+        },
+      },
+      componentsGroup: {
+        label: "Components",
+        menu: {
+          items: [
+            {
+              title: "Alert",
+              url: "/components/alert",
+            },
+            {
+              title: "Avatar",
+              url: "/components/avatar",
+            },
+            {
+              title: "Badge",
+              url: "/components/badge",
+            },
+            {
+              title: "Button",
+              url: "/components/button",
+            },
+            {
+              title: "Card",
+              url: "/components/card",
+            },
+            {
+              title: "Chip",
+              url: "/components/chip",
+            },
+            {
+              title: "Input",
+              url: "/components/input",
+            },
+            {
+              title: "Kbd",
+              url: "/components/kbd",
             },
           ],
         },

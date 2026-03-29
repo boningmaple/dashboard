@@ -1,9 +1,10 @@
 export type DashboardSidebarData = {
   dashboardSidebarGroups: {
-    blogGroup: DashboardSidebarGroupData;
+    postsGroup: DashboardSidebarGroupData;
     designSystemGroup: DashboardSidebarGroupData;
-    templatesGroup: DashboardSidebarGroupData;
+    componentsGroup: DashboardSidebarGroupData;
     blocksGroup: DashboardSidebarGroupData;
+    templatesGroup: DashboardSidebarGroupData;
   };
 };
 
