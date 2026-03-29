@@ -1,7 +1,7 @@
-import BasicAreaChart from "@/features/blocks/charts/echarts/line/basic-area-chart";
-import BasicLineChart from "@/features/blocks/charts/echarts/line/basic-line-chart";
-import SmoothedLineChart from "@/features/blocks/charts/echarts/line/smoothed-line-chart";
-import StackedLineChart from "@/features/blocks/charts/echarts/line/stacked-line-chart";
+import BasicAreaChart from "@/components/blocks/charts/echarts/line/basic-area-chart";
+import BasicLineChart from "@/components/blocks/charts/echarts/line/basic-line-chart";
+import SmoothedLineChart from "@/components/blocks/charts/echarts/line/smoothed-line-chart";
+import StackedLineChart from "@/components/blocks/charts/echarts/line/stacked-line-chart";
 
 export default function Page() {
   return (

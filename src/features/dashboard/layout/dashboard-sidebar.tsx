@@ -34,7 +34,7 @@ export default function DashboardSidebar({
         <SidebarSeparator className="mx-0" />
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
-            dashboardSidebarData.dashboardSidebarGroups.pagesGroup
+            dashboardSidebarData.dashboardSidebarGroups.templatesGroup
           }
         />
         <SidebarSeparator className="mx-0" />

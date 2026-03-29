@@ -1,4 +1,4 @@
-import Users from "@/features/dashboard/users";
+import Users from "@/features/dashboard/views/users-view";
 
 export default function Page() {
   return (

@@ -1,4 +1,4 @@
-import SignupFormClassic from "@/features/blocks/forms/signup/signup-form-classic";
+import SignupFormClassic from "@/components/blocks/forms/signup/signup-form-classic";
 
 export default function Page() {
   return (

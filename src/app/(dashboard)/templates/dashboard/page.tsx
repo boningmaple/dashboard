@@ -1,6 +1,6 @@
 import { getDashboardMetrics } from "@/features/dashboard/api/getDashboardMetrics";
 import { getOverviewChartData } from "@/features/dashboard/api/getOverviewChartData";
-import Dashboard from "@/features/dashboard/dashboard";
+import Dashboard from "@/features/dashboard/views/dashboard-view";
 
 export default async function Page() {
   const [dashboardMetrics, overviewChartData] = await Promise.all([

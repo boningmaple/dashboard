@@ -1,4 +1,4 @@
-import BasicBarChart from "@/features/blocks/charts/echarts/bar/basic-bar-chart";
+import BasicBarChart from "@/components/blocks/charts/echarts/bar/basic-bar-chart";
 
 export default function Page() {
   return (

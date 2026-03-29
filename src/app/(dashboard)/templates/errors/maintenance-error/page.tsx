@@ -1,4 +1,4 @@
-import MaintenanceError from "@/features/errors/maintenance-error";
+import MaintenanceError from "@/components/blocks/errors/maintenance-error";
 
 export default function MainTenanceErrorPage() {
   return (

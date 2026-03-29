@@ -1,4 +1,4 @@
-import RefererOfAWebsitePieChart from "@/features/blocks/charts/echarts/pie/referer-of-a-website-pie-chart";
+import RefererOfAWebsitePieChart from "@/components/blocks/charts/echarts/pie/referer-of-a-website-pie-chart";
 
 export default function Page() {
   return (

@@ -1,5 +1,5 @@
-import LoginFormClassic from "@/features/blocks/forms/login/login-form-classic";
-import LoginFormThirdPartyFirst from "@/features/blocks/forms/login/login-form-third-party-first";
+import LoginFormClassic from "@/components/blocks/forms/login/login-form-classic";
+import LoginFormThirdPartyFirst from "@/components/blocks/forms/login/login-form-third-party-first";
 
 export default function Page() {
   return (

@@ -7,8 +7,8 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MetricCard } from "@/features/dashboard/components/metric-card";
 import OverviewChart from "@/features/dashboard/components/overview-chart";
-import type { getDashboardMetrics } from "./api/getDashboardMetrics";
-import type { getOverviewChartData } from "./api/getOverviewChartData";
+import type { getDashboardMetrics } from "../api/getDashboardMetrics";
+import type { getOverviewChartData } from "../api/getOverviewChartData";
 
 type Props = {
   dashboardMetrics: Awaited<ReturnType<typeof getDashboardMetrics>>;

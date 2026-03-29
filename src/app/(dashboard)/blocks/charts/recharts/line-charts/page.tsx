@@ -1,4 +1,4 @@
-import SimpleLineChart from "@/features/blocks/charts/recharts/line/simple-line-chart";
+import SimpleLineChart from "@/components/blocks/charts/recharts/line/simple-line-chart";
 
 export default function Page() {
   return (

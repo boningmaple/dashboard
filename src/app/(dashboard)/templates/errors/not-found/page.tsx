@@ -1,4 +1,4 @@
-import NotFoundError from "@/features/errors/not-found-error";
+import NotFoundError from "@/components/blocks/errors/not-found-error";
 
 export default function Page() {
   return (

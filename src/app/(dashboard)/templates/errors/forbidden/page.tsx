@@ -1,4 +1,4 @@
-import ForbiddenError from "@/features/errors/forbidden-error";
+import ForbiddenError from "@/components/blocks/errors/forbidden-error";
 
 export default function Page() {
   return (

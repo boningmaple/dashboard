@@ -98,8 +98,8 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
           ],
         },
       },
-      pagesGroup: {
-        label: "Pages",
+      templatesGroup: {
+        label: "Templates",
         menu: {
           items: [
             {
@@ -108,17 +108,17 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               items: [
                 {
                   title: "Default",
-                  url: "/pages/dashboard",
+                  url: "/templates/dashboard",
                   icon: "layout-dashboard",
                 },
                 {
                   title: "Analytics",
-                  url: "/pages/dashboard/analytics",
+                  url: "/templates/dashboard/analytics",
                   icon: "chart-no-axes-combined",
                 },
                 {
                   title: "Users",
-                  url: "/pages/dashboard/users",
+                  url: "/templates/dashboard/users",
                   icon: "users",
                 },
               ],
@@ -129,27 +129,27 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               items: [
                 {
                   title: "Login",
-                  url: "/pages/auth/login",
+                  url: "/templates/auth/login",
                 },
                 {
                   title: "Sign Up",
-                  url: "/pages/auth/sign-up",
+                  url: "/templates/auth/sign-up",
                 },
                 {
                   title: "Forgot Password",
-                  url: "/pages/auth/forgot-password",
+                  url: "/templates/auth/forgot-password",
                 },
                 {
                   title: "Reset Password",
-                  url: "/pages/auth/reset-password",
+                  url: "/templates/auth/reset-password",
                 },
                 {
                   title: "Verify Email",
-                  url: "/pages/auth/verify-email",
+                  url: "/templates/auth/verify-email",
                 },
                 {
                   title: "OTP",
-                  url: "/pages/auth/otp",
+                  url: "/templates/auth/otp",
                 },
               ],
             },
@@ -159,44 +159,44 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               items: [
                 {
                   title: "Unauthorized",
-                  url: "/pages/errors/unauthorized",
+                  url: "/templates/errors/unauthorized",
                   icon: "lock",
                 },
                 {
                   title: "Forbidden",
-                  url: "/pages/errors/forbidden",
+                  url: "/templates/errors/forbidden",
                   icon: "user-x",
                 },
                 {
                   title: "Not Found",
-                  url: "/pages/errors/not-found",
+                  url: "/templates/errors/not-found",
                   icon: "file-x",
                 },
                 {
                   title: "Internal Server Error",
-                  url: "/pages/errors/internal-server-error",
+                  url: "/templates/errors/internal-server-error",
                   icon: "server-off",
                 },
                 {
                   title: "Maintenance Error",
-                  url: "/pages/errors/maintenance-error",
+                  url: "/templates/errors/maintenance-error",
                   icon: "construction",
                 },
               ],
             },
             {
               title: "Pricing",
-              url: "/pages/pricing",
+              url: "/templates/pricing",
               icon: "circle-dollar-sign",
             },
             {
               title: "Contact Us",
-              url: "/pages/contact-us",
+              url: "/templates/contact-us",
               icon: "phone",
             },
             {
               title: "FAQs",
-              url: "/pages/faqs",
+              url: "/templates/faqs",
               icon: "message-circle-question-mark",
             },
           ],
