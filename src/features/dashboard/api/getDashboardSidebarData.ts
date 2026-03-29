@@ -63,40 +63,111 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
         },
       },
       componentsGroup: {
-        label: "Components",
         menu: {
           items: [
             {
-              title: "Alert",
-              url: "/components/alert",
+              title: "Components",
+              icon: "component",
+              items: [
+                {
+                  title: "Alert",
+                  url: "/components/alert",
+                },
+                {
+                  title: "Avatar",
+                  url: "/components/avatar",
+                },
+                {
+                  title: "Badge",
+                  url: "/components/badge",
+                },
+                {
+                  title: "Button",
+                  url: "/components/button",
+                },
+                {
+                  title: "Card",
+                  url: "/components/card",
+                },
+                {
+                  title: "Chip",
+                  url: "/components/chip",
+                },
+                {
+                  title: "Input",
+                  url: "/components/input",
+                },
+                {
+                  title: "Kbd",
+                  url: "/components/kbd",
+                },
+              ],
+            },
+          ],
+        },
+      },
+      blocksGroup: {
+        label: "Blocks",
+        menu: {
+          items: [
+            {
+              title: "Charts",
+              icon: "chart-pie",
+              items: [
+                {
+                  title: "Recharts",
+                  items: [
+                    {
+                      title: "Line Charts",
+                      url: "/blocks/charts/recharts/line-charts",
+                    },
+                    {
+                      title: "Bar Charts",
+                      url: "/blocks/charts/recharts/bar-charts",
+                    },
+                    {
+                      title: "Pie Charts",
+                      url: "/blocks/charts/recharts/pie-charts",
+                    },
+                  ],
+                },
+                {
+                  title: "Echarts",
+                  items: [
+                    {
+                      title: "Line Charts",
+                      url: "/blocks/charts/echarts/line-charts",
+                    },
+                    {
+                      title: "Bar Charts",
+                      url: "/blocks/charts/echarts/bar-charts",
+                    },
+                    {
+                      title: "Pie Charts",
+                      url: "/blocks/charts/echarts/pie-charts",
+                    },
+                  ],
+                },
+              ],
             },
             {
-              title: "Avatar",
-              url: "/components/avatar",
+              title: "Tables",
+              icon: "table-2",
+              url: "/blocks/tables",
             },
             {
-              title: "Badge",
-              url: "/components/badge",
-            },
-            {
-              title: "Button",
-              url: "/components/button",
-            },
-            {
-              title: "Card",
-              url: "/components/card",
-            },
-            {
-              title: "Chip",
-              url: "/components/chip",
-            },
-            {
-              title: "Input",
-              url: "/components/input",
-            },
-            {
-              title: "Kbd",
-              url: "/components/kbd",
+              title: "Forms",
+              icon: "file-check-corner",
+              items: [
+                {
+                  title: "Login",
+                  url: "/blocks/forms/login",
+                },
+                {
+                  title: "Signup",
+                  url: "/blocks/forms/signup",
+                },
+              ],
             },
           ],
         },
@@ -201,72 +272,6 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
               title: "FAQs",
               url: "/templates/faqs",
               icon: "message-circle-question-mark",
-            },
-          ],
-        },
-      },
-      blocksGroup: {
-        label: "Blocks",
-        menu: {
-          items: [
-            {
-              title: "Charts",
-              icon: "chart-pie",
-              items: [
-                {
-                  title: "Recharts",
-                  items: [
-                    {
-                      title: "Line Charts",
-                      url: "/blocks/charts/recharts/line-charts",
-                    },
-                    {
-                      title: "Bar Charts",
-                      url: "/blocks/charts/recharts/bar-charts",
-                    },
-                    {
-                      title: "Pie Charts",
-                      url: "/blocks/charts/recharts/pie-charts",
-                    },
-                  ],
-                },
-                {
-                  title: "Echarts",
-                  items: [
-                    {
-                      title: "Line Charts",
-                      url: "/blocks/charts/echarts/line-charts",
-                    },
-                    {
-                      title: "Bar Charts",
-                      url: "/blocks/charts/echarts/bar-charts",
-                    },
-                    {
-                      title: "Pie Charts",
-                      url: "/blocks/charts/echarts/pie-charts",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              title: "Tables",
-              icon: "table-2",
-              url: "/blocks/tables",
-            },
-            {
-              title: "Forms",
-              icon: "file-check-corner",
-              items: [
-                {
-                  title: "Login",
-                  url: "/blocks/forms/login",
-                },
-                {
-                  title: "Signup",
-                  url: "/blocks/forms/signup",
-                },
-              ],
             },
           ],
         },

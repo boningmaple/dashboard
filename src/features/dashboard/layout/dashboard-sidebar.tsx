@@ -40,13 +40,13 @@ export default function DashboardSidebar({
         <SidebarSeparator className="mx-0" />
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
-            dashboardSidebarData.dashboardSidebarGroups.templatesGroup
+            dashboardSidebarData.dashboardSidebarGroups.blocksGroup
           }
         />
         <SidebarSeparator className="mx-0" />
         <DashboardSidebarGroup
           dashboardSidebarGroupData={
-            dashboardSidebarData.dashboardSidebarGroups.blocksGroup
+            dashboardSidebarData.dashboardSidebarGroups.templatesGroup
           }
         />
       </SidebarContent>

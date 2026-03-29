@@ -4,6 +4,7 @@ import {
   ChartNoAxesCombinedIcon,
   ChartPieIcon,
   CircleDollarSignIcon,
+  ComponentIcon,
   ConstructionIcon,
   FileCheckCornerIcon,
   FileXIcon,
@@ -41,6 +42,7 @@ const ICON_MAP = {
   "file-check-corner": FileCheckCornerIcon,
   library: LibraryIcon,
   palette: PaletteIcon,
+  component: ComponentIcon,
   // Brand Icons
   shadcnui: SiShadcnui,
 } as const;
