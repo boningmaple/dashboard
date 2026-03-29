@@ -19,7 +19,7 @@ export default function MaintenanceError() {
           Go Back
         </Button>
         <Button asChild>
-          <Link href="/pages/dashboard">Back to Home</Link>
+          <Link href="/templates/dashboard">Back to Home</Link>
         </Button>
       </div>
     </div>

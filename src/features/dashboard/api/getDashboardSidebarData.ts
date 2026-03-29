@@ -56,7 +56,6 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
                   title: "Ripple",
                   url: "/design-system/style-ripple",
                 },
-
               ],
             },
           ],
