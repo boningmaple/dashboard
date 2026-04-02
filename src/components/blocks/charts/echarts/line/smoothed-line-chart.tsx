@@ -20,8 +20,8 @@ const option = {
   ],
 };
 
-const SmoothedLineChart = () => {
+function SmoothedLineChart() {
   return <ReactECharts echarts={echarts} option={option} />;
-};
+}
 
 export default SmoothedLineChart;

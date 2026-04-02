@@ -66,8 +66,8 @@ const option = {
   ],
 };
 
-const StackedLineChart = () => {
+function StackedLineChart() {
   return <ReactECharts echarts={echarts} option={option} />;
-};
+}
 
 export default StackedLineChart;

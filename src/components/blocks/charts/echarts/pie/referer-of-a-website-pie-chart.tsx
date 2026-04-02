@@ -39,8 +39,8 @@ const option = {
   ],
 };
 
-const RefererOfAWebsitePieChart = () => {
+function RefererOfAWebsitePieChart() {
   return <ReactECharts echarts={echarts} option={option} />;
-};
+}
 
 export default RefererOfAWebsitePieChart;

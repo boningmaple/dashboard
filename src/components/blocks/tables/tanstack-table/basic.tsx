@@ -76,7 +76,7 @@ const columns = [
   }),
 ];
 
-const TanstackTableBasic = () => {
+function TanstackTableBasic() {
   const [data, _setData] = useState(() => [...defaultData]);
   const rerender = useReducer(() => ({}), {})[1];
 
@@ -139,6 +139,6 @@ const TanstackTableBasic = () => {
       </button>
     </div>
   );
-};
+}
 
 export default TanstackTableBasic;

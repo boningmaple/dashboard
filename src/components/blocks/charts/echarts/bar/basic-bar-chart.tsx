@@ -19,8 +19,8 @@ const option = {
   ],
 };
 
-const BasicBarChart = () => {
+function BasicBarChart() {
   return <ReactECharts echarts={echarts} option={option} />;
-};
+}
 
 export default BasicBarChart;

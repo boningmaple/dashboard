@@ -21,8 +21,8 @@ const option = {
   ],
 };
 
-const BasicAreaChart = () => {
+function BasicAreaChart() {
   return <ReactECharts echarts={echarts} option={option} />;
-};
+}
 
 export default BasicAreaChart;

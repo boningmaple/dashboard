@@ -56,7 +56,7 @@ const data = [
   },
 ];
 
-const SimpleLineChart = () => {
+function SimpleLineChart() {
   return (
     <LineChart
       style={{
@@ -80,6 +80,6 @@ const SimpleLineChart = () => {
       <RechartsDevtools />
     </LineChart>
   );
-};
+}
 
 export default SimpleLineChart;
