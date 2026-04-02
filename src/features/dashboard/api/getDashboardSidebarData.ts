@@ -152,7 +152,17 @@ export default async function getDashboardSidebarData(): Promise<DashboardSideba
             {
               title: "Tables",
               icon: "table-2",
-              url: "/blocks/tables",
+              items: [
+                {
+                  title: "TanStack Table",
+                  items: [
+                    {
+                      title: "Basic",
+                      url: "/blocks/tables/tanstack-table/basic",
+                    },
+                  ],
+                },
+              ],
             },
             {
               title: "Forms",
